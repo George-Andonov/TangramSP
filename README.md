@@ -1,2 +1,0 @@
-# tangram
-Tangram Silhouettes Project
