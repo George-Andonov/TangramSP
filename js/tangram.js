@@ -53,7 +53,7 @@
 		var t6Rot=document.getElementById("tan6")._gsTransform.rotation.toFixed(0);
 		//simple overlap test
 		
-		silString = "-, *** To be validated ***, new, "+
+		silString = "*** To be validated ***, new, "+
 			document.getElementById("tan1")._gsTransform.x +", " +document.getElementById("tan1")._gsTransform.y +", "+t1Rot + ", " +
 			document.getElementById("tan2")._gsTransform.x +", " +document.getElementById("tan2")._gsTransform.y +", "+t2Rot + ", " +
 			document.getElementById("tan3")._gsTransform.x +", " +document.getElementById("tan3")._gsTransform.y +", "+t3Rot + ", " +
@@ -72,18 +72,21 @@
 		}
 		
 		var mymodal = $('#infoSilModal');
-		mymodal.find('.modal-body').text("Current silhouette: "+silString);
+		mymodal.find('.modal-body').html("<p>Копирайте долния текст и го изпратете чрез формата за контакт най-долу на страницата.</p><hr><p>"+ silString + "</p><hr>");
 		mymodal.modal('show');
 	}
 
 // Send silString to the site
 	function sendSil() {
-		var url = "script/newsil.php?new='" + silString + "'";
+		// var url = "http://212.50.14.233/script/newsil.php?new='" + silString + "'";
+		// var url = "https://formspree.io/george.andonov@gmail.com";
 // LOG
-console.log(url);
+//console.log(url);
+		var xhr = new XMLHttpRequest();
 		// xhr.open("POST", url, true);
 		// xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-		// xhr.send(silString);
+		var data="name="+silString;
+		// xhr.send(data);
 		var mymodal = $('#thankYouModal');
 		mymodal.modal('show');
 	}
