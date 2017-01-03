@@ -72,7 +72,8 @@
 		}
 		
 		var mymodal = $('#infoSilModal');
-		mymodal.find('.modal-body').html("<p>Копирайте долния текст и го изпратете чрез формата за контакт най-долу на страницата.</p><hr><p>"+ silString + "</p><hr>");
+//		mymodal.find('.modal-body').html("<p>Копирайте долния текст и го изпратете чрез формата за контакт най-долу на страницата.</p><hr><p>"+ silString + "</p><hr>");
+		document.getElementById("sildesc").value = silString;
 		mymodal.modal('show');
 	}
 
@@ -202,7 +203,6 @@ var drawRandSil = function (){
             var link = document.createElement("a");
             var text = document.createTextNode(opt);
             link.appendChild(text);
-//            link.href = "javascript:infoSil()";
             link.href = 'javascript:drawOneSil('+ i +')';
             li.appendChild(link);
             silList.appendChild(li);
