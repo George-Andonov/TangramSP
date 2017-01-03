@@ -26,7 +26,7 @@
       margin-bottom: 30px;
   }
   .jumbotron {
-      background-color: #26a68e; 
+      background-color: #D2593F; 
       color: #fff;
       padding: 50px 25px;
       font-family: Montserrat, sans-serif;
@@ -42,14 +42,14 @@ svg{
 } 
   
   .hidSil {
-	stroke: #26a68e;
+	stroke: #D2593F;
 	stroke-width: 1;
-	fill: #26a68e;  
+	fill: #D2593F;  
   }
   .showSil {
-	stroke: #818181;
+	stroke: black;
 	stroke-width: 1;
-	fill: #26a68e;  
+	fill: #D2593F;  
   }
   .hidTan {
 	stroke: none;
@@ -58,7 +58,7 @@ svg{
   }
   .showTan {
 	stroke-width: 1;
-	fill: #26a68e;  
+	fill: #D2593F;  
   }
   
   .container-fluid {
@@ -71,7 +71,7 @@ svg{
       background-color: #f6f6f6;
   }
   .logo-small {
-      color: #26a68e;
+      color: #D2593F;
       font-size: 50px;
   }
   .logo {
@@ -91,16 +91,16 @@ svg{
   }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #26A68E;
+      color: #D2593F;
   }
   .carousel-indicators {
       bottom: 0px;
   }
   .carousel-indicators li {
-      border-color: #26A68E;
+      border-color: #D2593F;
   }
   .carousel-indicators li.active {
-      background-color: #26A68E;
+      background-color: #D2593F;
   }
   .item h4 {
       font-size: 19px;
@@ -113,7 +113,7 @@ svg{
       font-style: normal;
   }
   .panel {
-      border: 1px solid #26A68E;
+      border: 1px solid #D2593F;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
 	  background-color: rgba(0,0,0,.075);
@@ -122,13 +122,13 @@ svg{
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #26A68E;
+      border: 1px solid #D2593F;
       background-color: #fff !important;
-      color: #26A68E;
+      color: #D2593F;
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #26A68E !important;
+      background-color: #D2593F !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -148,12 +148,12 @@ svg{
   }
   .panel-footer .btn {
       margin: 15px 0;
-      background-color: #26A68E;
+      background-color: #D2593F;
       color: #fff;
   }
   .navbar {
       margin-bottom: 0;
-      background-color: #26A68E;
+      background-color: #D2593F;
 	  z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -170,7 +170,7 @@ svg{
 	  text-shadow: 3px 3px 8px gray;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #26A68E !important;
+      color: #D2593F !important;
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -180,7 +180,7 @@ svg{
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #26A68E;
+      color: #D2593F;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -232,12 +232,12 @@ svg{
   }
   
   .modal-header {
-	background-color: #26A68E;
+	background-color: #D2593F;
   }
   
 .scrollable-menu {
     height: auto;
-    max-height: 440px;
+    max-height: 395px;
     overflow-x: hidden;
 }
 	.scrollable-menu::-webkit-scrollbar {
@@ -257,5 +257,5 @@ svg{
   }
   
 .social {
-      color: #26A68E;
+      color: #D2593F;
   }

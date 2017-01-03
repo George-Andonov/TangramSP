@@ -26,7 +26,7 @@
       margin-bottom: 30px;
   }
   .jumbotron {
-      background-color: #D2593F; 
+      background-color: #26a68e; 
       color: #fff;
       padding: 50px 25px;
       font-family: Montserrat, sans-serif;
@@ -42,14 +42,14 @@ svg{
 } 
   
   .hidSil {
-	stroke: #D2593F;
+	stroke: #26a68e;
 	stroke-width: 1;
-	fill: #D2593F;  
+	fill: #26a68e;  
   }
   .showSil {
-	stroke: black;
+	stroke: #818181;
 	stroke-width: 1;
-	fill: #D2593F;  
+	fill: #26a68e;  
   }
   .hidTan {
 	stroke: none;
@@ -58,20 +58,20 @@ svg{
   }
   .showTan {
 	stroke-width: 1;
-	fill: #D2593F;  
+	fill: #26a68e;  
   }
   
   .container-fluid {
       padding: 60px 50px;
   }
   .container-head {
-      padding: 60px 20px;
+      padding: 20px 20px;
   }
   .bg-grey {
       background-color: #f6f6f6;
   }
   .logo-small {
-      color: #D2593F;
+      color: #26a68e;
       font-size: 50px;
   }
   .logo {
@@ -91,16 +91,16 @@ svg{
   }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #D2593F;
+      color: #26A68E;
   }
   .carousel-indicators {
       bottom: 0px;
   }
   .carousel-indicators li {
-      border-color: #D2593F;
+      border-color: #26A68E;
   }
   .carousel-indicators li.active {
-      background-color: #D2593F;
+      background-color: #26A68E;
   }
   .item h4 {
       font-size: 19px;
@@ -113,7 +113,7 @@ svg{
       font-style: normal;
   }
   .panel {
-      border: 1px solid #D2593F;
+      border: 1px solid #26A68E;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
 	  background-color: rgba(0,0,0,.075);
@@ -122,13 +122,13 @@ svg{
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #D2593F;
+      border: 1px solid #26A68E;
       background-color: #fff !important;
-      color: #D2593F;
+      color: #26A68E;
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #D2593F !important;
+      background-color: #26A68E !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -148,12 +148,12 @@ svg{
   }
   .panel-footer .btn {
       margin: 15px 0;
-      background-color: #D2593F;
+      background-color: #26A68E;
       color: #fff;
   }
   .navbar {
       margin-bottom: 0;
-      background-color: #D2593F;
+      background-color: #26A68E;
 	  z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -170,7 +170,7 @@ svg{
 	  text-shadow: 3px 3px 8px gray;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #D2593F !important;
+      color: #26A68E !important;
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -180,7 +180,7 @@ svg{
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #D2593F;
+      color: #26A68E;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -232,12 +232,12 @@ svg{
   }
   
   .modal-header {
-	background-color: #D2593F;
+	background-color: #26A68E;
   }
   
 .scrollable-menu {
     height: auto;
-    max-height: 395px;
+    max-height: 440px;
     overflow-x: hidden;
 }
 	.scrollable-menu::-webkit-scrollbar {
@@ -257,5 +257,5 @@ svg{
   }
   
 .social {
-      color: #D2593F;
+      color: #26A68E;
   }
