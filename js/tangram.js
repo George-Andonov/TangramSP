@@ -208,6 +208,29 @@ var drawRandSil = function (){
             silList.appendChild(li);
           }
 	}
+
+// Show one group
+	function showGroup(grName) {
+		var silList=document.getElementById("silDropdown"); 
+		silList.innerHTML="";
+		var firstSil=1;
+		for (var i = 2; i < (silDb.length); i++){
+			if (silDb[i][2]==grName || grName=="all") {
+				var opt = i-1 + ": " + silDb[i][1];
+				var li = document.createElement("li");
+				var link = document.createElement("a");
+				var text = document.createTextNode(opt);
+				link.appendChild(text);
+				link.href = 'javascript:drawOneSil('+ i +')';
+				if (firstSil==1){
+					firstSil=i;
+				}
+				li.appendChild(link);
+				silList.appendChild(li);
+			}
+          }
+		drawOneSil(firstSil);
+	}
 	
 // Move - Rotate tans
 		function moveRotate() {
