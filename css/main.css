@@ -60,7 +60,7 @@ svg{
 	stroke-width: 1;
 	fill: #D2593F;  
   }
-  
+
   .container-fluid {
       padding: 60px 50px;
   }
@@ -177,6 +177,7 @@ svg{
       border-color: transparent;
       color: #fff !important;
   }
+  
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
@@ -259,3 +260,8 @@ svg{
 .social {
       color: #D2593F;
   }
+
+  .input-group-addon {
+    min-width:105px;
+    text-align:left;
+}
