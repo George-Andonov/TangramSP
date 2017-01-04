@@ -91,8 +91,9 @@
 			<polygon id="tan7" points="0,0 141.42,0 212.13,70.71 70.71,70.71" /> 
 			<polygon id="tan7f" points="0,0 70.71,70.71 70.71,212.13 0,141.42" /> 
 		</g>
-		<text id="silName" x="400" y="20" fill="black" text-anchor="middle" alignment-baseline="middle">Silhouette - group</text>
-		<text id="silNo" x="400" y="40" fill="gray" text-anchor="middle" alignment-baseline="middle">Sil No: _____</text>
+		<!-- <text id="silName" x="400" y="20" fill="black" text-anchor="middle" alignment-baseline="middle">Silhouette - group</text>
+		<text id="silNo" x="400" y="40" fill="gray" text-anchor="middle" alignment-baseline="middle">Sil No: _____</text> 
+		-->
 	</svg>
 	<!-- Tangram buttons -->
 	<div class="btn-group btn-group-lg">
@@ -135,6 +136,13 @@
 				<ul id="silDropdown" class="dropdown-menu scrollable-menu dropdown-menu-right">
 				<!-- will be populated on load -->
 				</ul>
+		</div>
+		<br />
+		<div class="input-group">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" onclick="nextSil()">Show</button>
+			</span>
+			<input id="silNo" type="text" class="form-control text-center" placeholder="Search for...">
 		</div>
 		<br />
 		<div class="well well-lg"><h4>Проект „Танграм Силуети“ (Tangram Silhouettes Project) е база данни с интересни силуети за античната логическа игра <strong>Танграм</strong>.</h4>
