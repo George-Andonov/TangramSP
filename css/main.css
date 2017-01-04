@@ -161,8 +161,7 @@ svg{
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
-	  background: rgba(38,166,42,0);
-	  /* background: rgba(38,166,42,0.7); */
+	  background: rgba(210,89,63,0.9);
   }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
@@ -252,7 +251,7 @@ svg{
     }
 
 #silName {
-	font-size: 40px;
+	font-size: 25px;
 	text-shadow: 5px 5px 8px grey;
   }
   
