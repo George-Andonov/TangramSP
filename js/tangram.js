@@ -95,8 +95,8 @@
 
 // Draw silhouette
 	function drawSil() {
-		document.getElementById("silName").innerHTML = silDb[indx][1] + ' (' + silDb[indx][2] + ')';
-		document.getElementById("silNo").innerHTML = 'No: ' + silDb[indx][0];
+		// document.getElementById("silName").innerHTML = silDb[indx][1] + ' (' + silDb[indx][2] + ')';
+		document.getElementById("silNo").value = silDb[indx][0];
 		document.getElementById("groupMenu").innerHTML= silDb[indx][2] + ' <span class="caret caret-down"></span>';
 		document.getElementById("silMenu").innerHTML= silDb[indx][1] + ' <span class="caret caret-down"></span>';
 				
