@@ -156,8 +156,6 @@
       </div>
       
 	  <div class="modal-body">
-		<!-- FORM -->
-	  
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
@@ -168,16 +166,13 @@
 			<input class="form-control form-control-static" id="sildesc" name="sil-desc" type="text" disabled required>
 		</div>
 		<div class="col-sm-12 form-group">
-			<input class="form-control" id="message" name="message" type="textarea" rows="10">
+			<input class="form-control" id="message" name="message" type="textarea" placeholder="Your message" rows="5">
 		</div>
 	  <!--
 	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/ThankYou.html" />
 	   Thank you URL -->
-			
 	  </div>
-	  
-		<!-- FORM -->
-	
+
       <div class="modal-footer">
 		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
 		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send it to T.S.P.</button>
@@ -670,48 +665,77 @@
 </div>
 
 <!-- Container (About us Section) -->
-<div id="about" class="container-fluid text-center">
+<div id="about" class="container-fluid text-left">
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
       <h2>Нашата цел</h2>
 	</div>
-	<div class="col-sm-8 text-left" >
 	<p>Въпреки твърденията, че съществуват около 1 милион интересни фигури, досега са публикувани едва около 3000.</p>
 	<div class="well">Нашата цел е да съберем, проверим и опишем възможно най-голям брой интересни силуети.</div>
 	<p>Ако знаете силует, който не е включен в книгата, моля да ни го изпратите. След проверка за уникалност, силуетът ще бъде включен в базата данни, а вашето име ще бъде добавено в списъка с автори.</p>
-	<h3>Автори</h3>
-	<p>Танграм е древна игра и авторите на голям брой от силуетите са неизвестни.</p>
-	<ul class="list-group">
-		<li class="list-group-item">Ch’ien Yun-Chi – публикувала през 1858г. 6 ръкописа, съдържащи 1689 силуета.</li>
-		<li class="list-group-item">Сам Лойд – публикувал през 1903г. 640 силуета в книгата си „The 8 th Book of Tan, Part I”, около 400 от които навярно са измислени от него.</li>
-		<li class="list-group-item">Henry Ernest Dudeney – автор на първия "парадокс" силует, публикуван в книгата му "Amusements in Mathematics".</li>
-		<li class="list-group-item">Jerry Slocum – публикувал като съавтор през 2003г. най-задълбоченото проучване за танграм. Книгата съдържаща 1756 силуета.</li>
-		<li class="list-group-item">Нашият екип – скромен принос от няколко десетки силуета и публикувал безплатно най-пълнатия сборник със силуети за танграм.</li>
-		<li class="list-group-item">_______ – тук е мястото за вашето име. Просто ни изпратете уникален силует.</li>
-	</ul>
-    </div>
-	<div class="col-sm-4 text-left">
-		<img class="img-responsive" src="image/Set-book-BW.png" alt="George Andonov">
-		<h3>To-do list</h3>
-		<p>Следните неща би било добре да се случат в най-скоро време:</p>
-		<ul class="list-group">
-			<li class="list-group-item"><i class="glyphicon glyphicon-ok"></i> Hosting (GitHub)</li>
-			<li class="list-group-item"><i class="glyphicon glyphicon-ok"></i> Contact Us form (FormSpree)</li>
-			<li class="list-group-item"><i class="glyphicon glyphicon-ok"></i> Send to TSP form (FormSpree)</li>
-			<li class="list-group-item">Mobile menu</li>
-			<li class="list-group-item">Domain TangramSP.net</li>
-			<li class="list-group-item"><i class="glyphicon glyphicon-ok"></i> Google Analytics</li>
-			<li class="list-group-item"><i class="glyphicon glyphicon-ok"></i> 404 page</li>
-			<li class="list-group-item">превод на сайта на английски.</li>
-			<li class="list-group-item">Language Selector</li>
-			<li class="list-group-item">превод на книгата на английски.</li>
-			<li class="list-group-item">въвеждане на ВСИЧКИ познати силуети в базата данни!</li>
-			<li class="list-group-item">... Go live.</li>
-			<li class="list-group-item">Social media: facebook & Google plus</li>
-		</ul>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<a data-toggle="collapse" href="#authors"><i class="glyphicon glyphicon-user"></i>&nbsp; Автори</a>
+				</h3>
+			</div>
+			<div id="authors" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>Танграм е древна игра и авторите на голям брой от силуетите са неизвестни.</p>
+					<p>Значителен принос имат следните автори:</p>
+					<ul class="list-group">
+						<li class="list-group-item">Ch’ien Yun-Chi – публикувала през 1858г. 6 ръкописа, съдържащи 1689 силуета.</li>
+						<li class="list-group-item">Сам Лойд – публикувал през 1903г. 640 силуета в книгата си „The 8 th Book of Tan, Part I”, около 400 от които навярно са измислени от него.</li>
+						<li class="list-group-item">Henry Ernest Dudeney – автор на първия "парадокс" силует, публикуван в книгата му "Amusements in Mathematics".</li>
+						<li class="list-group-item"><a href="http://www.slocumpuzzles.com/index2.html" target="_blank">Jerry Slocum</a> – публикувал като съавтор през 2003г. най-задълбоченото проучване за танграм. Книгата съдържаща 1756 силуета.</li>
+						<li class="list-group-item">Нашият екип – скромен принос от няколко десетки силуета и публикувал безплатно най-пълнатия сборник със силуети за танграм.</li>
+						<li class="list-group-item">__________ – тук е мястото за вашето име. Просто ни изпратете уникален силует.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<a data-toggle="collapse" href="#credit"><i class="glyphicon glyphicon-bullhorn"></i>&nbsp; Credits</a>
+				</h3>
+			</div>
+			<div id="credit" class="panel-collapse collapse">
+				<div class="panel-body">
+					<ul class="list-group">
+						<li class="list-group-item"><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com" target="_blank">GitHub</a> - hosting</li>
+						<li class="list-group-item"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> - HTML, CSS, and JS framework</li>
+						<li class="list-group-item"><a href="https://formspree.io/" target="_blank">FormSpree</a> - forms for static HTML pages</li>
+						<li class="list-group-item">Developers:</li>
+						<li class="list-group-item">Translators:</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+				<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<a data-toggle="collapse" href="#todo"><i class="glyphicon glyphicon-search"></i>&nbsp; To-do list</a>
+				</h3>
+			</div>
+			<div id="todo" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>Следните неща би било добре да се случат в най-скоро време:</p>
+					<ul class="list-group">
+						<li class="list-group-item">Mobile menu</li>
+						<li class="list-group-item">Domain TangramSP.net</li>
+						<li class="list-group-item">превод на сайта на английски.</li>
+						<li class="list-group-item">Language Selector</li>
+						<li class="list-group-item">превод на книгата на английски.</li>
+						<li class="list-group-item">въвеждане на ВСИЧКИ познати силуети в базата данни!</li>
+						<li class="list-group-item">... Go live.</li>
+						<li class="list-group-item">Social media: facebook & Google plus</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-  </div>
-</div>
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
