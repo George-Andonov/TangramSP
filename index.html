@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <!-- Tangram Silhouettes Project - CC BY-SA -->
   <title>Tangram Silhouettes Project</title>
@@ -146,13 +146,13 @@
 </div>
 
 <!-- Info silhouette - modal dialogue -->
-<div class="modal fade" id="infoSilModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="infoSilModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSil">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Silhouette</h4>
+        <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Silhouette</h4>
       </div>
       
 	  <div class="modal-body">
@@ -184,12 +184,12 @@
 <!-- END - Info Silhouette - modal dialogue -->
 
 <!-- Thank you - modal dialogue -->
-<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel10x">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Thank you</h4>
+        <h4 class="modal-title" id="ModalLabel10x"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Thank you</h4>
       </div>
       <div class="modal-body">
 		<p class="text-center">Thank you for your contribution.</p>
@@ -203,15 +203,15 @@
 <!-- END - Thank you - modal dialogue -->
 
 <!-- Settings - modal dialogue -->
-<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSettings">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"> <i class="glyphicon glyphicon-cog"></i> Settings</h4>
+        <h4 class="modal-title" id="ModalLabelSettings"> <i class="glyphicon glyphicon-cog"></i> Settings</h4>
       </div>
       <div class="modal-body">
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal">
 		<div class="form-group">
 		<div class="dropdown col-sm-4">
 			<div class="btn-group btn-block">
@@ -735,6 +735,8 @@
 			</div>
 		</div>
 	</div>
+ </div>
+</div>
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
@@ -754,10 +756,10 @@
 	  <!-- FORM -->
 	  <form name="contactform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="name" name="myName" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email" required>
+          <input class="form-control" id="myEmail" name="_replyto" placeholder="Your e-mail address" type="email" required>
         </div>
 		<div class="col-sm-12 form-group">
 			<textarea class="form-control" id="comments" name="comment" placeholder="Comments" rows="5"></textarea><br>
