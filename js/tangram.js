@@ -72,22 +72,33 @@
 		}
 		
 		var mymodal = $('#infoSilModal');
-//		mymodal.find('.modal-body').html("<p>Копирайте долния текст и го изпратете чрез формата за контакт най-долу на страницата.</p><hr><p>"+ silString + "</p><hr>");
 		document.getElementById("sildesc").value = silString;
 		mymodal.modal('show');
 	}
 
+//Show Silhouette solution
+	function showSol() {
+		var indxSil = 0;
+		var silNumber = document.getElementById("silNo").value;
+		for (var i = 1; i < (silDb.length); i++){
+			if (silDb[i][0] == silNumber) {
+				indxSil = i;
+			}
+		}
+		if (indxSil == 0) {
+			var mymodal = $('#silNotFoundModal');
+			mymodal.modal('show');
+		} 
+		else {
+			indx = indxSil;
+			drawSil();
+		}
+	}
+	
 // Send silString to the site
 	function sendSil() {
-		// var url = "http://212.50.14.233/script/newsil.php?new='" + silString + "'";
-		// var url = "https://formspree.io/george.andonov@gmail.com";
-// LOG
-//console.log(url);
 		var xhr = new XMLHttpRequest();
-		// xhr.open("POST", url, true);
-		// xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 		var data="name="+silString;
-		// xhr.send(data);
 		var mymodal = $('#thankYouModal');
 		mymodal.modal('show');
 	}
