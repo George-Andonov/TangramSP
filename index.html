@@ -113,19 +113,19 @@
 			<ul class="dropdown-menu scrollable-menu">
 				<li><a href='javascript:showGroup("all")'>All silhouettes</a></li>
 				<li class="divider"></li>
-				<li><a href='javascript:showGroup("animal")'>Animal</a></li>
-				<li><a href='javascript:showGroup("bird")'>Bird</a></li>
-				<li><a href='javascript:showGroup("boat")'>Boat</a></li>
-				<li><a href='javascript:showGroup("building")'>Building</a></li>
-				<li><a href='javascript:showGroup("face")'>Face</a></li>
-				<li><a href='javascript:showGroup("fish")'>Fish</a></li>
-				<li><a href='javascript:showGroup("human")'>Human</a></li>
-				<li><a href='javascript:showGroup("nature")'>Nature</a></li>
-				<li><a href='javascript:showGroup("object")'>Object</a></li>
-				<li><a href='javascript:showGroup("shape")'>Shape</a></li>
-				<li><a href='javascript:showGroup("sport")'>Sport</a></li>
-				<li><a href='javascript:showGroup("technical")'>Technical</a></li>
-				<li><a href='javascript:showGroup("toy")'>Toy</a></li>
+				<li><a href='javascript:showGroup("Animal")'>Animal</a></li>
+				<li><a href='javascript:showGroup("Bird")'>Bird</a></li>
+				<li><a href='javascript:showGroup("Boat")'>Boat</a></li>
+				<li><a href='javascript:showGroup("Building")'>Building</a></li>
+				<li><a href='javascript:showGroup("Face")'>Face</a></li>
+				<li><a href='javascript:showGroup("Fish")'>Fish</a></li>
+				<li><a href='javascript:showGroup("Human")'>Human</a></li>
+				<li><a href='javascript:showGroup("Nature")'>Nature</a></li>
+				<li><a href='javascript:showGroup("Object")'>Object</a></li>
+				<li><a href='javascript:showGroup("Shape")'>Shape</a></li>
+				<li><a href='javascript:showGroup("Sport")'>Sport</a></li>
+				<li><a href='javascript:showGroup("Technical")'>Technical</a></li>
+				<li><a href='javascript:showGroup("Toy")'>Toy</a></li>
 				<li class="divider"></li>
 				<li><a href='javascript:showGroup("new")'>New submissions (Not verified)</a></li>
 			</ul>
@@ -140,14 +140,14 @@
 		<br />
 		<div class="input-group">
 			<span class="input-group-btn">
-				<button class="btn btn-default" type="button" onclick="nextSil()">Show</button>
+				<button class="btn btn-default " type="button" onclick="showSol()">Show me</button>
 			</span>
 			<input id="silNo" type="text" class="form-control text-center" placeholder="Search for...">
 		</div>
 		<br />
 		<div class="well well-lg"><h4>Проект „Танграм Силуети“ (Tangram Silhouettes Project) е база данни с интересни силуети за античната логическа игра <strong>Танграм</strong>.</h4>
 		</div>
-		<p><br />За ваше удобство сме събрали всички <mark>2122</mark> силуета в една <a href="#book">книга</a>.</p>
+		<p><br />Всички познати ни <mark>2122</mark> силуета са събрани в една <a href="#book">книга</a>.</p>
 		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея.</p>
 	</div>
 </div>
@@ -176,7 +176,6 @@
 		<div class="col-sm-12 form-group">
 			<textarea class="form-control" id="message" name="message" placeholder="Your message" rows="3"></textarea>
 		</div>
-	  
 	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
 	  <!-- Thank you URL -->
 	  </div>
@@ -209,6 +208,25 @@
   </div>
 </div>
 <!-- END - Thank you - modal dialogue -->
+
+<!-- Silhouette not found - modal dialogue -->
+<div class="modal fade" id="silNotFoundModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSol">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelSol"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Silhouette not found</h4>
+      </div>
+      <div class="modal-body">
+		<p class="text-center">Sorry, the silhouette you are looking does not exist.</p>
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Silhouette not found - modal dialogue -->
 
 <!-- Settings - modal dialogue -->
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSettings">
@@ -414,7 +432,7 @@
       <h2>История, факти и спекулации</h2>
 		<p>Древният произход на Танграм не е доказан със сигурност, тъй като най-ранното известно писмено свидетелство за него е в китайска книга от 1813 г., но се смята, че пъзелът е бил широко разпространен в Китай далеч преди това, като е бил любима игра на жените и децата. Може би това е причината да няма по-ранни писмени доказателства – вероятно в онези времена и места се е смятало, че не си струва да се пише и изследва такава „несериозна” игра. На Запад е известен от началото на 19 век, когато моряци го донесли със себе си от Хонг Конг до Англия. Предполага се, че наименованието Танграм се е получило при неправилно произнасяне на китайски термин, който моряците научили от търговците на опиум. Едното предположение е, че идва от „танка“, наименование на лодките на търговците, и английското „game“ (игра). Друга възможност е да идва от „тан“, китайска дума за местните „дами за удоволствия“, които неизменно съпътствали моряците. Навярно играта е била любимо занимание в свободното време и на двете групи.</p>
 		<p>Тъй като истинската история на Танграм е забулена в митове и мистерия, истината за неговия произход и етимология е обект на значителна спекулация.</p>
-		<p>През 1903г. американският специалист по пъзели Сам Лойд издава книга, наречена „<a href="book/Sam Loyd's Book of tangrams.pdf" target="_blank">The 8th Book of Tan, Part I</a>”, в която прокарва идеята, че Танграм е измислен преди 4000 години от древнокитайската личност (човек или божество) Тан, което със седемте части представило сътворението на всичко в света, а самите тани представлявали небесните тела. Книгата донесла добри приходи на своя автор, но впоследствие се оказва, че информацията в нея е пълна измислица, която не почива на никакви факти.</p>
+		<p>През 1903г. американският специалист по пъзели Сам Лойд издава книга, наречена „The 8th Book of Tan, Part I”, в която прокарва идеята, че Танграм е измислен преди 4000 години от древнокитайската личност (човек или божество) Тан, което със седемте части представило сътворението на всичко в света, а самите тани представлявали небесните тела. Книгата донесла добри приходи на своя автор, но впоследствие се оказва, че информацията в нея е пълна измислица, която не почива на никакви факти.</p>
 		<p>Въпреки съмнителната достоверност на фактите, книгата на Сам Лойд изиграла решаваща роля за популяризирането на Танграм в западния свят. В нея са събрани около 640 примерни фигури, 7 от които са невъзможни или поне засега (повече от 110 години по-късно) няма открито решение за тях. По-късно издаваните книги, а наскоро и във виртуалното пространство, обикновено копират вече публикувани силуети, включително грешките в тях.</p>
 		<p>Думата <mark>Танграм</mark> за първи път е използвана през 1848г. от Томас Хил, по-късно президент на Харвардския университет, в книгата му "Геометрични пъзели за младежта". На китайски името на играта буквално означава "седем плочки на умението".</p>
 		<p>В оригиналния си вид играта е квадрат, но в днешно време се предлагат разновидности като правоъгълник, кръг, сърцевиден или яйцевиден Танграм. С тях обаче възможностите за създаване на фигури са далеч по-ограничени.</p>
@@ -774,9 +792,8 @@
 		<div class="col-sm-12 form-group">
 			<textarea class="form-control" id="comments" name="comment" placeholder="Comments" rows="5"></textarea><br>
 		</div>
-	  <!--
-	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/" />
-	   Thank you URL -->
+	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
+	  <!-- Thank you URL -->
       <button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
 	  </form>
 	  <!-- FORM -->
