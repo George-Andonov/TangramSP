@@ -39,8 +39,7 @@
 		$('#hideBtn').hide();
 		currentTan = document.getElementById("tan1");
 	});
-
-
+	
 // -------------- DROPDOWN LIST
 	
 //Info Silhouette
