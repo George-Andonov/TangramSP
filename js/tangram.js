@@ -102,7 +102,6 @@
 		mymodal.modal('show');
 	}
 
-
 // Draw silhouette
 	function drawSil() {
 		// document.getElementById("silName").innerHTML = silDb[indx][1] + ' (' + silDb[indx][2] + ')';
