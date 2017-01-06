@@ -237,7 +237,7 @@ svg{
   
 .scrollable-menu {
     height: auto;
-    max-height: 395px;
+    max-height: 440px;
     overflow-x: hidden;
 }
 	.scrollable-menu::-webkit-scrollbar {
