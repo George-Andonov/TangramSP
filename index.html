@@ -788,7 +788,8 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey text-center">
 	<h2 class="text-center">Вашето мнение е важно за нас</h2>
-	<a class="btn btn-default btn-lg" href="news.html">Оставете коментар</a>
+	<a class="btn btn-default btn-lg" data-toggle="modal" data-target="#commentsModal">Оставете коментар</a>
+	<a class="btn btn-info btn-lg" href="news.html">Страница с коментари</a>
 	<a class="btn btn-default btn-lg" href="https://facebook.com/">
 		<i class="fa fa-facebook" title="Facebook" aria-hidden="true"></i>
 		<span class="sr-only">Facebook</span>
@@ -819,6 +820,53 @@
   </div>
 -->
 </div>
+
+<!-- Comments - modal dialogue -->
+<div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="ModalComments">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalComments"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Comments</h4>
+      </div>
+      
+	  <div class="modal-body">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="myName" name="myName" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="myEmail" name="myEmail" placeholder="Your e-mail address" type="email" required>
+        </div>
+		<div class="col-sm-12 form-group">
+			<textarea class="form-control" id="myMessage" name="myMessage" placeholder="Your message" rows="3" required></textarea>
+		</div>
+	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
+	  <!-- Thank you URL -->
+		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
+	  </div>
+
+      <div class="modal-footer">
+		<div class="col-sm-12 text-center">
+			<h3>Comments from facebook users</h3>
+			<div class="fb-comments" data-href="https://george-andonov.github.io/TangramSP/index.html" data-width="100%" data-numposts="15"></div>
+		</div>
+	  </div>
+	</form>
+    </div>
+  </div>
+</div>
+<!-- END - Comments - modal dialogue -->
+<!-- facebook plugin -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
