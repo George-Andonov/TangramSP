@@ -341,17 +341,17 @@ function showHint() {
 window.addEventListener("keydown", checkKeys, false);
 function checkKeys(e) {
     switch(e.keyCode) {
-        case 80:
-			// 37 left key pressed
+        case 188:
+			// < key pressed
 			prevSil();
             break;
-        case 38:
-            // up key pressed
-			infoSil();
-            break;
-        case 78:
-            // 39 right key pressed
+        case 190:
+            // > key pressed
 			nextSil();
+            break;
+		case 83:
+            // s key pressed
+			infoSil();
             break;
         case 70:
             // f key pressed
@@ -361,28 +361,28 @@ function checkKeys(e) {
             // x key pressed
 			moveRotate();
             break;
-		case 65:
-            // a key pressed
+		case 37:
+            // left arrow pressed
 			TweenLite.to(currentTan, 0.5, {x:"-=1px"});
             break;
-		case 68:
-            // d key pressed
+		case 39:
+            // right arrow pressed
 			TweenLite.to(currentTan, 0.5, {x:"+=1px"});
             break;
-		case 87:
-            // w key pressed
+		case 38:
+            // up arrow pressed
 			TweenLite.to(currentTan, 0.5, {y:"-=1px"});
             break;
-		case 83:
-            // s key pressed
+		case 40:
+            // down arrow pressed
 			TweenLite.to(currentTan, 0.5, {y:"+=1px"});
-            break;
-		case 82:
-            // r key pressed
-			TweenLite.to(currentTan, 0.5, {rotation:"+=1"});
             break;
 		case 84:
             // t key pressed
+			TweenLite.to(currentTan, 0.5, {rotation:"+=1"});
+            break;
+		case 82:
+            // r key pressed
 			TweenLite.to(currentTan, 0.5, {rotation:"-=1"});
             break;
 		case 97:
