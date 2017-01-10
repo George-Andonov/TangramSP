@@ -340,7 +340,7 @@ function showHint() {
 // Keyboard	
 window.addEventListener("keyup", checkKeys, false);
 function checkKeys(e) {
-    switch(e.keyCode) {
+    switch(e.which) {
         case 188:
 			// < key pressed
 			prevSil();
@@ -386,7 +386,7 @@ function checkKeys(e) {
 			currentTan = document.getElementById("tan1");
             break;
 		case 98:
-            // Numpad - down key pressed
+            // Numpad - 2 pressed
 			currentTan = document.getElementById("tan2");
             break;
 		case 99:
@@ -394,7 +394,7 @@ function checkKeys(e) {
 			currentTan = document.getElementById("tan3");
             break;
 		case 100:
-            // Numpad - left key pressed
+            // Numpad - 4 pressed
 			currentTan = document.getElementById("tan4");
             break;
 		case 101:
@@ -402,7 +402,7 @@ function checkKeys(e) {
 			currentTan = document.getElementById("tan5");
             break;
 		case 102:
-            // Numpad - right key pressed
+            // Numpad - 6 pressed
 			currentTan = document.getElementById("tan6");
             break;
 		case 103:
