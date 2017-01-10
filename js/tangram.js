@@ -349,12 +349,12 @@ function checkKeys(e) {
             // > key pressed
 			nextSil();
             break;
-        case 70:
-            // f key pressed
+        case 45:
+            // Ins key pressed
 			flipRomboid();
             break;
-		case 88:
-            // x key pressed
+		case 46:
+            // Del key pressed
 			moveRotate();
             break;
 		case 37:
