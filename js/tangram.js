@@ -349,10 +349,6 @@ function checkKeys(e) {
             // > key pressed
 			nextSil();
             break;
-		case 83:
-            // s key pressed
-			infoSil();
-            break;
         case 70:
             // f key pressed
 			flipRomboid();
