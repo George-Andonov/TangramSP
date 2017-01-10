@@ -20,25 +20,22 @@
   <link rel="alternate stylesheet" type="text/css" href="css/theme3.css" title="theme3">
   <link rel="alternate stylesheet" type="text/css" href="css/theme4.css" title="theme4">
   <link rel="alternate stylesheet" type="text/css" href="css/theme5.css" title="theme5">
-  
   <!-- jQuery and Bootstrap JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/styleswitch.js"></script>
   <!-- GSAP JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/TextPlugin.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
-  
-  <script type="text/javascript" src="js/styleswitch.js"></script>
   <!-- Tangram JavaScript -->
   <script type="text/javascript" src="js/silhouettes.js"></script>
   <script type="text/javascript" src="js/tangram.js"></script>
-  
 </head>
-<body id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="startMe()">
 
+<body id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="startMe()">
 <!-- Menu -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -109,7 +106,7 @@
 		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="prevSil()"><i class="glyphicon glyphicon-chevron-left"></i></button>
 		<button id="actBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Преместване/Завъртане (x)"><i class="glyphicon glyphicon-move"></i></button>
 		<button id="flipBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Обръщане на ромбоида (f)" ><i class="glyphicon glyphicon-share" aria-hidden="true"></i></button>
-		<button id="slideBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="slideShow()" title="Слайдшоу"><i class="fa fa-pause" aria-hidden="true"></i></button>
+		<button id="slideBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="slideShow()" title="Slideshow"><i class="fa fa-pause" aria-hidden="true"></i></button>
 		<button id="hideBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Показване/Скриване на очертанията (?)"><i class="fa fa-question" aria-hidden="true"></i></button>
 		<button id="infoBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="infoSil()" title="Изпращане на силует (↑)"><i class="fa fa-send" aria-hidden="true"></i></button>
 		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="nextSil()"><i class="glyphicon glyphicon-chevron-right"></i></button>
@@ -165,226 +162,6 @@
 </div>
 </div>
 
-<!-- Info silhouette - modal dialogue -->
-<div class="modal fade" id="infoSilModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSil">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Силует</h4>
-      </div>
-      
-	  <div class="modal-body">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email" required>
-        </div>
-		<div class="col-sm-12 form-group">
-			<input class="form-control form-control-static" id="sildesc" name="sil-desc" type="text" required>
-		</div>
-		<div class="col-sm-12 form-group">
-			<textarea class="form-control" id="message" name="message" placeholder="Your message" rows="3"></textarea>
-		</div>
-	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
-	  <!-- Thank you URL -->
-	  </div>
-
-      <div class="modal-footer">
-		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send it to T.S.P.</button>
-      </div>
-	</form>
-    </div>
-  </div>
-</div>
-<!-- END - Info Silhouette - modal dialogue -->
-
-<!-- Thank you - modal dialogue -->
-<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel10x">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabel10x"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Thank you</h4>
-      </div>
-      <div class="modal-body">
-		<p class="text-center">Thank you for your contribution.</p>
-      </div>
-      <div class="modal-footer">
-		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END - Thank you - modal dialogue -->
-
-<!-- Silhouette not found - modal dialogue -->
-<div class="modal fade" id="silNotFoundModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSol">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelSol"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Silhouette not found</h4>
-      </div>
-      <div class="modal-body">
-		<p class="text-center">Sorry, the silhouette you are looking does not exist.</p>
-      </div>
-      <div class="modal-footer">
-		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END - Silhouette not found - modal dialogue -->
-
-<!-- Settings - modal dialogue -->
-<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSettings">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelSettings"> <i class="glyphicon glyphicon-cog"></i> Настройки</h4>
-      </div>
-      <div class="modal-body">
-		<form class="form-horizontal">
-		<div class="form-group">
-		<div class="dropdown col-sm-4">
-			<div class="btn-group btn-block">
-			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i>&nbsp; Language <span class="caret"></span></button>
-			<ul class="dropdown-menu">
-				<li class="disabled"><a href="#">English</a></li>
-				<li><a href="#">Български</a></li>
-			</ul>
-			</div>
-		</div>
-		<div class="dropdown col-sm-4">
-			<div class="btn-group btn-block">
-			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp; Дизайн <span class="caret"></span></button>
-			<ul class="dropdown-menu">
-				<li><a href="javascript:chooseStyle('default', 60)">Кафяво</a></li>
-				<li><a href="javascript:chooseStyle('theme1', 60)">Зелено</a></li>
-				<li><a href="javascript:chooseStyle('theme2', 60)">Пастел</a></li>
-				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
-				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
-				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
-			</ul>
-			</div>
-		</div>
-		<div class="dropdown col-sm-4">
-			<div class="btn-group btn-block">
-			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Анимация <span class="caret"></span></button>
-			<ul class="dropdown-menu">
-				<li><a href="#">Elastic slow out</a></li>
-				<li class="disabled"><a href="javascript:chooseStyle('default', 60)">Linear</a></li>
-			</ul>
-			</div>
-		</div>
-		</div>
-		<h3>Настройки</h3>
-		<div class="row">
-		<div class="dropdown col-sm-6">
-		<div class="checkbox">
-			<label><input id="cbGameMode" type="checkbox" onchange="gameMode()"> Режим на игра</label>
-		</div>
-		<!-- <div class="checkbox">
-			<label><input id="cbGrid" type="checkbox" checked disabled> Show grid</label>
-		</div> 
-		-->
-		<div class="checkbox">
-			<label><input id="cbHint" type="checkbox" onchange="showHint()">Показване/Скриване на очертанията</label>
-		</div>
-		</div>
-		<div class="dropdown col-sm-6">
-		<div class="checkbox">
-			<label><input id="cbShadow" type="checkbox" checked onchange="showShadow()"> Сянка</label>
-		</div>
-		<div class="checkbox">
-			<label><input id="cbRandom" type="checkbox" checked onchange="" disabled> Произволен ред</label>
-		</div>
-		</div>
-		</div>
-		
-		<div class="panel-group">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-				<h3 class="panel-title">
-					<a data-toggle="collapse" href="#collapse1"><i class="fa fa-keyboard-o" aria-hidden="true"></i>&nbsp; Бързи клавиши</a>
-				</h3>
-				</div>
-				<div id="collapse1" class="panel-collapse collapse">
-					<div class="panel-body">
-					<div class="table-responsive">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Клавиш</th>
-								<th>Действие</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><kbd><</kbd></td>
-								<td>Предишен силует</td>
-							</tr>
-							<tr>
-								<td><kbd>></kbd></td>
-								<td>Следващ силует</td>
-							</tr>
-							<tr>
-								<td><kbd>f</kbd></td>
-								<td>Обръщане на ромбоида</td>
-							</tr>
-							<tr>
-								<td><kbd>?</kbd></td>
-								<td>Показване/Скриване на очертанията</td>
-							</tr>
-							<tr>
-								<td><kbd>s</kbd></td>
-								<td>Изпращане на нов силует</td>
-							</tr>
-							<tr>
-								<td><kbd>x</kbd></td>
-								<td>Режим на Преместване/Завъртане</td>
-							</tr>
-							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-left"></span>&nbsp; (left arrow)</td>
-								<td>Преместване вляво</td>
-							</tr>
-							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-right"></span>&nbsp; (right arrow)</td>
-								<td>Преместване надясно</td>
-							</tr>
-							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-up"></span>&nbsp; (up arrow)</td>
-								<td>Преместване нагоре</td>
-							</tr>
-							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-down"></span>&nbsp; (down arrow)</td>
-								<td>Преместване надолу</td>
-							</tr>
-						</tbody>
-					</table>
-					</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		</form>
-      </div>
-      <div class="modal-footer">
-<!--      		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Credits</button> 
--->
-		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END - Settings - modal dialogue -->
-
 <!-- Container (Project Section) -->
 <div id="project" class="jumbotron">
   <div class="row">
@@ -404,7 +181,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Container (Rules Section) -->
 <div id="rules" class="container-fluid bg-grey text-center">
@@ -431,20 +207,13 @@
 	<div class="col-sm-12 text-left">
 		<h2>Комплект за игра</h2>
 	</div>
-	<div class="col-sm-1"> </div>
-	<div class="col-sm-10 text-left">
+	<div class="col-sm-8 text-left">
 		<img class="img-responsive" src="image/set.png" alt="Tangram set">
 	</div>
-	<div class="col-sm-1"> </div>
-  </div>
-  <div class="row slideanim">
-    <div class="col-sm-8 text-left" >
+    <div class="col-sm-4 text-left" >
 		<p>Комплектът от 7 плочки за игра обикновено е изработен от дърво, пластмаса, метал или картон.</p>
 		<p>Ако не разполагате с такъв, можете сами да си направите от различни материали – дърво, пластмаса, картон, хартия. Материалът няма значение, стига да го изрежете в правилните размери и пропорции.</p>
-		<p>Изрежете квадрат с резмери 12х12cm (или 4х4inches), като използвате показаната схема. Изрежете по маркираните линии и загладете ръбовете, ако е необходимо.</p>
-	</div>
-	<div class="col-sm-4">
-		<a href="image/make.png" target="_blank"><img class="img-responsive" src="image/make.png" alt="Tangram set"></a>
+		<p>Изрежете квадрат с резмери 12х12cm (или 4х4inches), като използвате тази <a data-toggle="modal" data-target="#imageSetModal">схема</a>. Изрежете по маркираните линии и загладете ръбовете, ако е необходимо.</p>
 	</div>
   </div>
 </div>
@@ -618,7 +387,6 @@
 			</div>
 	
 	</ul>
-
 </div>
 </div>
 </div>
@@ -638,7 +406,7 @@
   </div>
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
-	<p><br />Друг древен аналог на играта е „<a href="image/Stomachion.png" target="_blank">Stomachion</a>“ на Архимед (loculus Archimedius – на латински „кутията на Архимед“), който е съставен от 14 части. Възможните подредби на 14-те парчета в квадрат са 17152 – ако е допустимо обръщане на парчетата, или 64 – ако парчетата не се обръщат. „Кутията на Архимед“ не е получила широко разпространение поради трудната си изработка и твърде „научния“ си вид, непредполагащ забавление.</p>
+	<p>Друг древен аналог на играта е „<a data-toggle="modal" data-target="#imageStModal">Stomachion</a>“ на Архимед (loculus Archimedius – на латински „кутията на Архимед“), който е съставен от 14 части. Възможните подредби на 14-те парчета в квадрат са 17152 – ако е допустимо обръщане на парчетата, или 64 – ако парчетата не се обръщат. „Кутията на Архимед“ не е получила широко разпространение поради трудната си изработка и твърде „научния“ си вид, непредполагащ забавление.</p>
     </div>
   </div>
 </div>
@@ -802,28 +570,276 @@
 		<i class="fa fa-google-plus" title="Google plus" aria-hidden="true"></i>
 		<span class="sr-only">Google plus</span>
 	</a>
-<!-- 
-  <div class="row">
-    <div class="col-sm-12 slideanim">
-	  <div class="row">
-	  <form name="contactform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <a href="#homePage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="http://www.TangramSP.net" title="Tangram Silhouettes Project">www.TangramSP.net</a></p>
+</footer>
+
+
+<!-- *** Modal dialogues *** -->
+<!-- Settings - modal dialogue -->
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSettings">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelSettings"> <i class="glyphicon glyphicon-cog"></i> Настройки</h4>
+      </div>
+      <div class="modal-body">
+		<form class="form-horizontal">
+		<div class="form-group">
+		<div class="dropdown col-sm-4">
+			<div class="btn-group btn-block">
+			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i>&nbsp; Language <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li class="disabled"><a href="#">English</a></li>
+				<li><a href="#">Български</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="dropdown col-sm-4">
+			<div class="btn-group btn-block">
+			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp; Дизайн <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="javascript:chooseStyle('default', 60)">Кафяво</a></li>
+				<li><a href="javascript:chooseStyle('theme1', 60)">Зелено</a></li>
+				<li><a href="javascript:chooseStyle('theme2', 60)">Пастел</a></li>
+				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
+				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
+				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="dropdown col-sm-4">
+			<div class="btn-group btn-block">
+			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Анимация <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="#">Elastic slow out</a></li>
+				<li class="disabled"><a href="javascript:chooseStyle('default', 60)">Linear</a></li>
+			</ul>
+			</div>
+		</div>
+		</div>
+		<h3>Настройки</h3>
+		<div class="row">
+		<div class="dropdown col-sm-6">
+		<div class="checkbox">
+			<label><input id="cbGameMode" type="checkbox" onchange="gameMode()"> Режим на игра</label>
+		</div>
+		<!-- <div class="checkbox">
+			<label><input id="cbGrid" type="checkbox" checked disabled> Show grid</label>
+		</div> 
+		-->
+		<div class="checkbox">
+			<label><input id="cbHint" type="checkbox" onchange="showHint()">Показване/Скриване на очертанията</label>
+		</div>
+		</div>
+		<div class="dropdown col-sm-6">
+		<div class="checkbox">
+			<label><input id="cbShadow" type="checkbox" checked onchange="showShadow()"> Сянка</label>
+		</div>
+		<div class="checkbox">
+			<label><input id="cbRandom" type="checkbox" checked onchange="" disabled> Произволен ред</label>
+		</div>
+		</div>
+		</div>
+		
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				<h3 class="panel-title">
+					<a data-toggle="collapse" href="#collapse1"><i class="fa fa-keyboard-o" aria-hidden="true"></i>&nbsp; Бързи клавиши</a>
+				</h3>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="panel-body">
+					<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Клавиш</th>
+								<th>Действие</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><kbd><</kbd></td>
+								<td>Предишен силует</td>
+							</tr>
+							<tr>
+								<td><kbd>></kbd></td>
+								<td>Следващ силует</td>
+							</tr>
+							<tr>
+								<td><kbd>f</kbd></td>
+								<td>Обръщане на ромбоида</td>
+							</tr>
+							<tr>
+								<td><kbd>?</kbd></td>
+								<td>Показване/Скриване на очертанията</td>
+							</tr>
+							<tr>
+								<td><kbd>s</kbd></td>
+								<td>Изпращане на нов силует</td>
+							</tr>
+							<tr>
+								<td><kbd>x</kbd></td>
+								<td>Режим на Преместване/Завъртане</td>
+							</tr>
+							<tr>
+								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-left"></span></td>
+								<td>Преместване вляво</td>
+							</tr>
+							<tr>
+								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-right"></span></td>
+								<td>Преместване надясно</td>
+							</tr>
+							<tr>
+								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-up"></span></td>
+								<td>Преместване нагоре</td>
+							</tr>
+							<tr>
+								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-down"></span></td>
+								<td>Преместване надолу</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+<!--      		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Credits</button> 
+-->
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Settings - modal dialogue -->
+`
+<!-- Info silhouette - modal dialogue -->
+<div class="modal fade" id="infoSilModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSil">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Силует</h4>
+      </div>
+      
+	  <div class="modal-body">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="myName" name="myName" placeholder="Name" type="text" required>
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="myEmail" name="_replyto" placeholder="Your e-mail address" type="email" required>
+          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email" required>
         </div>
 		<div class="col-sm-12 form-group">
-			<textarea class="form-control" id="comments" name="comment" placeholder="Comments" rows="5"></textarea><br>
+			<input class="form-control form-control-static" id="sildesc" name="sil-desc" type="text" required>
+		</div>
+		<div class="col-sm-12 form-group">
+			<textarea class="form-control" id="message" name="message" placeholder="Your message" rows="3"></textarea>
 		</div>
 	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
-      <button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
-	  </form>
+	  <!-- Thank you URL -->
 	  </div>
-	 </div>
+
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send it to T.S.P.</button>
+      </div>
+	</form>
+    </div>
   </div>
--->
 </div>
+<!-- END - Info Silhouette - modal dialogue -->
+
+<!-- Thank you - modal dialogue -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel10x">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabel10x"> <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Thank you</h4>
+      </div>
+      <div class="modal-body">
+		<p class="text-center">Thank you for your contribution.</p>
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Thank you - modal dialogue -->
+
+<!-- Silhouette not found - modal dialogue -->
+<div class="modal fade" id="silNotFoundModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSol">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelSol"> <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp; Silhouette not found</h4>
+      </div>
+      <div class="modal-body">
+		<p class="text-center">Sorry, the silhouette you are looking does not exist.</p>
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Silhouette not found - modal dialogue -->
+
+
+<!-- Image Set - modal dialogue -->
+<div class="modal fade" id="imageSetModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelImageSet">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelImageSet"> <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp; Tangram set</h4>
+      </div>
+      <div class="modal-body text-center">
+		<img class="img-responsive" src="image/make.png" alt="Tangram set">
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Image Set - modal dialogue -->
+
+<!-- Image Stomachion - modal dialogue -->
+<div class="modal fade" id="imageStModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelImage">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabelImage"> <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp; Stomachion</h4>
+      </div>
+      <div class="modal-body text-center">
+		<img class="img-responsive" src="image/Stomachion.png" alt="Stomachion">
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END - Image Stomachion - modal dialogue -->
 
 <!-- Comments - modal dialogue -->
 <div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="ModalComments">
@@ -863,6 +879,8 @@
   </div>
 </div>
 <!-- END - Comments - modal dialogue -->
+
+<!-- *** Plug-ins *** -->
 <!-- facebook plugin -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -872,14 +890,6 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Footer -->
-<footer class="container-fluid text-center">
-  <a href="#homePage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="http://www.TangramSP.net" title="Tangram Silhouettes Project">www.TangramSP.net</a></p>
-</footer>
 
 <!-- Google Analytics -->
 <script>
