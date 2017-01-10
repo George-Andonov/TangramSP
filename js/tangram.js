@@ -338,7 +338,7 @@ function showHint() {
 }
 
 // Keyboard	
-window.addEventListener("keydown", checkKeys, false);
+window.addEventListener("keyup", checkKeys, false);
 function checkKeys(e) {
     switch(e.keyCode) {
         case 188:
