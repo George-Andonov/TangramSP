@@ -373,12 +373,12 @@ function checkKeys(e) {
             // down arrow pressed
 			TweenLite.to(currentTan, 0.5, {y:"+=1px"});
             break;
-		case 84:
-            // t key pressed
+		case 105:
+            // 9 key pressed
 			TweenLite.to(currentTan, 0.5, {rotation:"+=1"});
             break;
-		case 82:
-            // r key pressed
+		case 104:
+            // 8 key pressed
 			TweenLite.to(currentTan, 0.5, {rotation:"-=1"});
             break;
 		case 97:
