@@ -739,13 +739,22 @@
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email" required>
+          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email">
         </div>
 	  </div>
 	  <div class="row">
 		<div class="col-sm-12 form-group has-success has-feedback">
 			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
 			<input class="form-control form-control-static" id="sildesc" name="sil-desc" type="text" required>
+		</div>
+		<div class="col-sm-12 form-group">	
+			<div class="input-group">
+				<input type="file" name="img[]" class="file">
+				<input type="text" name="fileName" class="form-control" disabled placeholder="... or Upload Image">
+				<span class="input-group-btn">
+					<button class="browse btn btn-default" type="button"><i class="glyphicon glyphicon-picture"></i></button>
+				</span>
+			</div>
 		</div>
 		<div class="col-sm-12 form-group">
 			<textarea class="form-control" id="message" name="message" placeholder="Your message" rows="3"></textarea>
