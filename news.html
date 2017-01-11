@@ -72,7 +72,7 @@
   <a href="#homePage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="http://www.TangramSP.net" title="Tangram Silhouettes Project">www.TangramSP.net</a></p>
+  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="https://TangramSP.net" title="Tangram Silhouettes Project">TangramSP.net</a></p>
 </footer>
 
 
@@ -96,43 +96,6 @@
   ga('create', 'UA-89589154-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-<!-- Smoot scrolling -->
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#homePage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
 </script>
 </body>
 </html>
