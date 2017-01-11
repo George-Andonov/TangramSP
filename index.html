@@ -749,10 +749,10 @@
 		</div>
 		<div class="col-sm-12 form-group">	
 			<div class="input-group">
-				<input type="file" name="img[]" class="file">
+				<input type="file" name="img" class="file">
 				<input type="text" name="fileName" class="form-control" disabled placeholder="... or Upload Image">
 				<span class="input-group-btn">
-					<button class="browse btn btn-default" type="button"><i class="glyphicon glyphicon-picture"></i></button>
+					<button type="button" class="browse btn btn-default"><i class="glyphicon glyphicon-picture"></i></button>
 				</span>
 			</div>
 		</div>
@@ -855,7 +855,7 @@
 <div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="ModalComments">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
+	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST" target="hiddenFrame">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="ModalComments"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Comments</h4>
