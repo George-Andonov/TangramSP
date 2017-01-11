@@ -1,0 +1,57 @@
+﻿/* theme 8 - #73041F Red */
+ 
+ .jumbotron {
+      background-color: #73041F; 
+  }  
+  .hidSil {
+	stroke: #73041F;
+	fill: #73041F;  
+  }
+  .showSil {
+	fill: #73041F;  
+  }
+  .showTan {
+	fill: #73041F;  
+  }
+  .logo-small {
+      color: #73041F;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #73041F;
+  }
+  .carousel-indicators li {
+      border-color: #73041F;
+  }
+  .carousel-indicators li.active {
+      background-color: #73041F;
+  }
+  .panel {
+      border: 1px solid #73041F;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #73041F;
+      color: #73041F;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #73041F !important;
+  }
+  .panel-footer .btn {
+      background-color: #73041F;
+  }
+  .navbar {
+      background-color: #73041F;
+	  background: rgba(162,4,31,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #73041F !important;
+  }
+  footer .glyphicon {
+      color: #73041F;
+  }
+  .modal-header {
+	background-color: #73041F;
+  } 
+.social {
+      color: #73041F;
+  }
