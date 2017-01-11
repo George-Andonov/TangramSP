@@ -113,8 +113,9 @@
 	</div>
 	</div>
 	<div class="col-sm-4 text-left"> 
+	 <div class="row">
 		<div id="groupDrop" class="input-group">
-			<span class="input-group-addon">Категория:</span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-folder-open"></span></span>
 			<button id="groupMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">All silhouettes<span class="caret"></span></button> 
 			<ul class="dropdown-menu scrollable-menu">
 				<li><a href='javascript:showGroup("all")'>Всички силуети</a></li>
@@ -143,17 +144,19 @@
 				<!-- will be populated on load -->
 				</ul>
 		</div>
-		<br />
-		
+	 </div>
+	 <div class="row">
 		<iframe name="hiddenFrame" style="display:none;"></iframe>
 		<form target="hiddenFrame">
-		<div class="input-group">
+		<div class="input-group text-right">
 			<span class="input-group-btn">
-				<input id="showBtn" class="btn btn-default" type="submit" onclick="showSol()" value="Покажи">
+			<!-- 	<input id="showBtn" class="btn btn-default" type="submit" onclick="showSol()" value="Покажи"> -->
+				<button id="showBtn" class="btn btn-default" type="submit" onclick="showSol()"><span class="glyphicon glyphicon-search"></span></button>
 			</span>
 			<input id="silNo" type="text" class="form-control text-center" placeholder="solution for #___">
 		</div>
 		</form>
+	 </div>
 		<br />
 		<div class="well well-lg"><h4>Проект „Танграм Силуети“ (Tangram Silhouettes Project) е база данни с интересни силуети за древната логическа игра <strong>Танграм</strong>.</h4>
 		</div>
@@ -578,7 +581,7 @@
   <a href="#homePage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="http://www.TangramSP.net" title="Tangram Silhouettes Project">www.TangramSP.net</a></p>
+  <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="https://TangramSP.net" title="Tangram Silhouettes Project">TangramSP.net</a></p>
 </footer>
 
 
@@ -689,20 +692,16 @@
 								<td>Режим на Преместване/Завъртане</td>
 							</tr>
 							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-left"></span></td>
-								<td>Преместване вляво</td>
+								<td><kbd>1</kbd>...<kbd>7</kbd></td>
+								<td>Избор на тан</td>
 							</tr>
 							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-right"></span></td>
-								<td>Преместване надясно</td>
+								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-left"></span> <span class="glyphicon glyphicon-arrow-right"></span> <span class="glyphicon glyphicon-arrow-up"></span> <span class="glyphicon glyphicon-arrow-down"></span></td>
+								<td>Преместване в съответната посока</td>
 							</tr>
 							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-up"></span></td>
-								<td>Преместване нагоре</td>
-							</tr>
-							<tr>
-								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-down"></span></td>
-								<td>Преместване надолу</td>
+								<td><kbd>8</kbd> <kbd>9</kbd></td>
+								<td>Завъртане</td>
 							</tr>
 						</tbody>
 					</table>
