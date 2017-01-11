@@ -1,0 +1,57 @@
+﻿/* theme 1 - #73046B Violet */
+ 
+ .jumbotron {
+      background-color: #73046B; 
+  }  
+  .hidSil {
+	stroke: #73046B;
+	fill: #73046B;  
+  }
+  .showSil {
+	fill: #73046B;  
+  }
+  .showTan {
+	fill: #73046B;  
+  }
+  .logo-small {
+      color: #73046B;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #73046B;
+  }
+  .carousel-indicators li {
+      border-color: #73046B;
+  }
+  .carousel-indicators li.active {
+      background-color: #73046B;
+  }
+  .panel {
+      border: 1px solid #73046B;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #73046B;
+      color: #73046B;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #73046B !important;
+  }
+  .panel-footer .btn {
+      background-color: #73046B;
+  }
+  .navbar {
+      background-color: #73046B;
+	  background: rgba(115,4,107,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #73046B !important;
+  }
+  footer .glyphicon {
+      color: #73046B;
+  }
+  .modal-header {
+	background-color: #73046B;
+  } 
+.social {
+      color: #73046B;
+  }
