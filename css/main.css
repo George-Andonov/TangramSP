@@ -272,3 +272,8 @@ svg{
   .input-group-btn {
     min-width: 105px;
 }
+
+.file {
+  visibility: hidden;
+  position: absolute;
+}
