@@ -153,7 +153,6 @@
 		<form target="hiddenFrame">
 		<div class="input-group text-right">
 			<span class="input-group-btn">
-			<!-- 	<input id="showBtn" class="btn btn-default" type="submit" onclick="showSol()" value="Покажи"> -->
 				<button id="showBtn" class="btn btn-default" type="submit" onclick="showSol()"><i class="fa fa-search" aria-hidden="true"></i></button>
 			</span>
 			<input id="silNo" type="text" class="form-control text-center" placeholder="solution for #___">
@@ -492,7 +491,6 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid text-center">
 	<h2 class="text-center">Вашето мнение е важно за нас</h2>
-	<!-- <a class="btn btn-default btn-lg" data-toggle="modal" data-target="#commentsModal">Оставете коментар</a> -->
 	<a class="btn btn-default btn-lg" href="news.html">Оставете коментар</a>
 	<a class="btn btn-default btn-lg" href="https://facebook.com/">
 		<i class="fa fa-facebook" title="Facebook" aria-hidden="true"></i>
@@ -508,12 +506,6 @@
 <div id="about" class="container-fluid bg-grey text-left">
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
-<!--      <h2>Нашата цел</h2>
-	</div>
-	<p>Въпреки твърденията, че съществуват около 1 милион интересни фигури, досега са публикувани едва около 3000.</p>
-	<div class="well">Нашата цел е да съберем, проверим и опишем възможно най-голям брой интересни силуети.</div>
-	<p>Ако знаете силует, който не е включен в нашата база, моля да ни го изпратите. След проверка за уникалност, силуетът ще бъде включен в базата данни, а вашето име ще бъде добавено в списъка с автори.</p>
-	-->
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -545,13 +537,13 @@
 			<div id="credit" class="panel-collapse collapse">
 				<div class="panel-body">
 					<ul class="list-group">
-						<li class="list-group-item">Преводачи:</li>
+						<li class="list-group-item">Преводачи: _______</li>
 						<li class="list-group-item">Автор: Георги Андонов</li>
 						<li class="list-group-item">Програмист: Георги Андонов</li>
 						<li class="list-group-item"><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com" target="_blank">GitHub</a> - hosting</li>
 						<li class="list-group-item"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> - HTML, CSS, and JS framework</li>
 						<li class="list-group-item">Bootstrap theme "<a href="http://www.w3schools.com/bootstrap/bootstrap_theme_company.asp" target="_blank">Company</a>" from W3Schools</li>
-						<li class="list-group-item"><a href="https://greensock.com/gsap" target="_blank">GreenSock Animation Platform (GSAP)</a> - SVG animation</li>
+						<li class="list-group-item"><a href="https://greensock.com/gsap" target="_blank">GreenSock Animation Platform (GSAP)</a> - tools for scripted animation</li>
 						<li class="list-group-item"><a href="https://getsimpleform.com/" target="_blank">Simple Form</a></li>
 					</ul>
 				</div>
@@ -582,7 +574,6 @@
  </div>
 </div>
 </div>
-
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
@@ -663,7 +654,6 @@
 		</div>
 		</div>
 		</div>
-		
 		<div class="panel-group">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -725,8 +715,6 @@
 		</form>
       </div>
       <div class="modal-footer">
-<!--      		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Credits</button> 
--->
 		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
       </div>
     </div>
@@ -823,7 +811,6 @@
 </div>
 <!-- END - Silhouette not found - modal dialogue -->
 
-
 <!-- Image Set - modal dialogue -->
 <div class="modal fade" id="imageSetModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelImageSet">
   <div class="modal-dialog modal-lg" role="document">
@@ -861,65 +848,6 @@
   </div>
 </div>
 <!-- END - Image Stomachion - modal dialogue -->
-
-<!-- Comments - modal dialogue 
-<div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="ModalComments">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST" >
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalComments"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Comments</h4>
-      </div>
-      
-	  <div class="modal-body">
-	  <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="myName" name="myName" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="myEmail" name="myEmail" placeholder="e-mail address" type="email" required>
-        </div>
-	 </div>
-	 <div class="row">
-		<div class="col-sm-12 form-group">
-			<textarea class="form-control" id="myMessage" name="myMessage" placeholder="Your message" rows="3" required></textarea>
-		</div>
-	 </div>
-	 <div class="row">
-	  <div class="col-sm-12 form-group">
-	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
-		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
-		<br /><hr>
-		<h3>Comments from facebook users</h3>
-			<div class="fb-comments" data-href="https://george-andonov.github.io/TangramSP/index.html" data-width="100%" data-numposts="15"></div>
-	  </div>
-	 </div>
-	</div>
-      <div class="modal-footer">
-	   <div class="row">
-		<div class="col-sm-12 text-center">
-			<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-		</div>
-	   </div>
-	  </div>
-	</form>
-    </div>
-  </div>
-</div>
-<!-- END - Comments - modal dialogue -->
-
-<!-- *** Plug-ins *** -->
-<!-- facebook plugin 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
--->
 
 
 <!-- *** Plug-ins *** -->
