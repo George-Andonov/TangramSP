@@ -41,7 +41,7 @@
   }
   .navbar {
       background-color: #F63E87;
-	  background: rgba(51,153,204,0.9);
+	  background: rgba(246,62,135,0.9);
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
       color: #F63E87 !important;
