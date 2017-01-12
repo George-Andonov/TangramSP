@@ -31,9 +31,9 @@
 			}
     }});
 
-	// Activate tooltip & hide some buttons
+	// Activate tooltip & hide some buttons	
 	$(function () { 
-		$("[data-toggle='tooltip']").tooltip(); 
+		$("[data-toggle='tooltip']").tooltip({trigger : 'hover'}); 
 		$('#actBtn').hide();
 		$('#flipBtn').hide();
 		$('#hideBtn').hide();
