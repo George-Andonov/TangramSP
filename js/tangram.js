@@ -20,6 +20,7 @@
 	var gridHeight = 2;
 	var lSnap = true;
 	var currentTan = 1;
+	var curX, curY, curA;
 	// set default movement - Move
 	Draggable.create("#tan1,#tan2,#tan3,#tan4,#tan5,#tan6,#tan7,#tan7f", {type:"x,y", edgeResistance:0.65, bounds:"#grid", throwProps:true, liveSnap:lSnap,
 		snap: {
@@ -280,7 +281,6 @@ var drawRandSil = function (){
 // Settings - modal dialogue
 function settingsDialog (){
 	var mymodal = $('#settingsModal');
-	// mymodal.find('.modal-body').text(silString);
 	mymodal.modal('show');
 }
 
@@ -369,27 +369,34 @@ function checkKeys(e) {
             break;
 		case 37:
             // left arrow pressed
-			TweenLite.to(currentTan, 0.5, {x:"-=1px"});
+			curX = Math.round(currentTan._gsTransform.x)-1;
+			TweenLite.to(currentTan, 0.5, {x:curX});
             break;
 		case 39:
             // right arrow pressed
-			TweenLite.to(currentTan, 0.5, {x:"+=1px"});
+			curX = Math.round(currentTan._gsTransform.x)+1;
+			TweenLite.to(currentTan, 0.5, {x:curX});
             break;
 		case 38:
             // up arrow pressed
-			TweenLite.to(currentTan, 0.5, {y:"-=1px"});
+			curY = Math.round(currentTan._gsTransform.y)-1;
+			TweenLite.to(currentTan, 0.5, {y:curY});
             break;
 		case 40:
             // down arrow pressed
-			TweenLite.to(currentTan, 0.5, {y:"+=1px"});
+			curY = Math.round(currentTan._gsTransform.y)+1;
+			TweenLite.to(currentTan, 0.5, {y:curY});
             break;
 		case 105:
             // 9 key pressed
-			TweenLite.to(currentTan, 0.5, {rotation:"+=1"});
+			curA = Math.round(currentTan._gsTransform.rotation)+1;
+			console.log(curA);
+			TweenLite.to(currentTan, 0.5, {rotation:curA});
             break;
 		case 104:
             // 8 key pressed
-			TweenLite.to(currentTan, 0.5, {rotation:"-=1"});
+			curA = Math.round(currentTan._gsTransform.rotation)-1;
+			TweenLite.to(currentTan, 0.5, {rotation:curA});
             break;
 		case 97:
             // Numpad - 1 key pressed
