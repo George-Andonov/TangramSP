@@ -1,9 +1,4 @@
 /* default - #D2593F Brown */
-/* theme 1 - #26A68E Green */
-/* theme 2 - #EEA090 Pastel*/
-/* theme 3 - #284B9F Blue */
-/* theme 4 - #f4511e Orange */
-/* theme 5 - #F63E87 Pink */
 
   body {
       background-image: url("../image/gray-paper-1.png");
@@ -264,13 +259,6 @@ svg{
   .input-group{
 	padding: 5px;
   }
-  .input-group-addon {
-	min-width: 105px;
-}
-
-  .input-group-btn {
-    min-width: 105px;
-}
 
 .file {
   visibility: hidden;
