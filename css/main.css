@@ -265,7 +265,7 @@ svg{
 }
 
 #coordinates {
-	/* display: none; */
+	display: none; 
 }
 
 /* #silName {
