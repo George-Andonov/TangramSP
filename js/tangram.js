@@ -347,6 +347,12 @@ function showHint() {
 	}
 }
 
+function printXYA() {
+	document.getElementById("silX").value = Math.round(currentTan._gsTransform.x);
+	document.getElementById("silY").value = Math.round(currentTan._gsTransform.y);
+	document.getElementById("silA").value = Math.round(currentTan._gsTransform.rotation);
+}
+
 // Keyboard	
 window.addEventListener("keyup", checkKeys, false);
 function checkKeys(e) {
@@ -371,56 +377,74 @@ function checkKeys(e) {
             // left arrow pressed
 			curX = Math.round(currentTan._gsTransform.x)-1;
 			TweenLite.to(currentTan, 0.5, {x:curX});
+			printXYA();
             break;
 		case 39:
             // right arrow pressed
 			curX = Math.round(currentTan._gsTransform.x)+1;
 			TweenLite.to(currentTan, 0.5, {x:curX});
+			printXYA();
             break;
 		case 38:
             // up arrow pressed
 			curY = Math.round(currentTan._gsTransform.y)-1;
 			TweenLite.to(currentTan, 0.5, {y:curY});
+			printXYA();
             break;
 		case 40:
             // down arrow pressed
 			curY = Math.round(currentTan._gsTransform.y)+1;
 			TweenLite.to(currentTan, 0.5, {y:curY});
+			printXYA();
             break;
 		case 105:
             // 9 key pressed
 			curA = Math.round(currentTan._gsTransform.rotation)+1;
-			console.log(curA);
 			TweenLite.to(currentTan, 0.5, {rotation:curA});
+			printXYA();
             break;
 		case 104:
             // 8 key pressed
 			curA = Math.round(currentTan._gsTransform.rotation)-1;
 			TweenLite.to(currentTan, 0.5, {rotation:curA});
+			printXYA();
             break;
 		case 97:
             // Numpad - 1 key pressed
 			currentTan = document.getElementById("tan1");
+			// print X, Y, A coordinates
+			document.getElementById("curS").value = "1";
+			printXYA();
             break;
 		case 98:
             // Numpad - 2 pressed
 			currentTan = document.getElementById("tan2");
+			document.getElementById("curS").value = "2";
+			printXYA();
             break;
 		case 99:
             // Numpad - 3 key pressed
 			currentTan = document.getElementById("tan3");
+			document.getElementById("curS").value = "3";
+			printXYA();
             break;
 		case 100:
             // Numpad - 4 pressed
 			currentTan = document.getElementById("tan4");
+			document.getElementById("curS").value = "4";
+			printXYA();
             break;
 		case 101:
             // Numpad - 5 key pressed
 			currentTan = document.getElementById("tan5");
+			document.getElementById("curS").value = "5";
+			printXYA();
             break;
 		case 102:
             // Numpad - 6 pressed
 			currentTan = document.getElementById("tan6");
+			document.getElementById("curS").value = "6";
+			printXYA();
             break;
 		case 103:
             // Numpad - 7 key pressed
@@ -430,6 +454,8 @@ function checkKeys(e) {
 			else {
 				currentTan = document.getElementById("tan7f");
 			}
+			document.getElementById("curS").value = "7";
+			printXYA();
             break;
 		case 191:
             // question key pressed
