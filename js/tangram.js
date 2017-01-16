@@ -309,6 +309,7 @@ function gameMode() {
 		document.getElementById("flipBtn").setAttribute("onclick", "flipRomboid()");
 		$('#actBtn').show();
 		$('#flipBtn').show();
+		$('#coordinates').show()
 	}
 	else {
 		document.getElementById("actBtn").className += " disabled";
@@ -317,6 +318,7 @@ function gameMode() {
 		document.getElementById("flipBtn").removeAttribute('onclick');
 		$('#actBtn').hide();
 		$('#flipBtn').hide();
+		$('#coordinates').hide()
 	}
 }
 
