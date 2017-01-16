@@ -246,11 +246,6 @@ svg{
         background-color: lightgray;
         -webkit-box-shadow: 0 0 1px rgba(255,255,255,.75);        
     }
-
-#silName {
-	font-size: 25px;
-	text-shadow: 5px 5px 8px grey;
-  }
   
 .social {
       color: #D2593F;
@@ -259,8 +254,22 @@ svg{
   .input-group{
 	padding: 5px;
   }
+  
+  .input-small{
+	max-width: 70px;
+  }
 
 .file {
   visibility: hidden;
   position: absolute;
 }
+
+#coordinates {
+	/* display: none; */
+}
+
+/* #silName {
+	font-size: 25px;
+	text-shadow: 5px 5px 8px grey;
+  }
+*/
