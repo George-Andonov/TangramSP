@@ -5,8 +5,8 @@
   <title>Tangram Silhouettes Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name=”description” content=”Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.”>
-  <meta name=keywords content=”tangram, tangram game”>
+  <meta name=”description” content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
+  <meta name=keywords content="tangram, tangram game">
   <!-- Favicon -->
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <!-- CSS -->
@@ -52,7 +52,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right text-right">
-        <li><a data-toggle="collapse" data-target=".navbar-collapse" onclick="settingsDialog()"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse.in" onclick="settingsDialog()"><span class="glyphicon glyphicon-cog"></span></a></li>
       </ul>
     </div>
   </div>
@@ -62,8 +62,7 @@
 <div class="playground text-center">
 <div class="row">
 	<div class="col-sm-8">
-	<svg id="canvas" viewBox="0 0 800 800" tabindex="1"
-		xmlns="http://www.w3.org/2000/svg">
+	<svg id="canvas" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
 		<!-- Canvas grid -->
 		<defs>
 			<pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
@@ -153,17 +152,27 @@
 		<form target="hiddenFrame">
 		<div class="input-group text-right">
 			<span class="input-group-btn">
-			<!-- 	<input id="showBtn" class="btn btn-default" type="submit" onclick="showSol()" value="Покажи"> -->
 				<button id="showBtn" class="btn btn-default" type="submit" onclick="showSol()"><i class="fa fa-search" aria-hidden="true"></i></button>
 			</span>
 			<input id="silNo" type="text" class="form-control text-center" placeholder="solution for #___">
 		</div>
 		</form>
+		
+		<!-- coordinates -->
+		<form id="coordinates" class="form-inline" target="hiddenFrame">
+			<input id="curS" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="1">
+			<input id="silX" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="X">
+			<input id="silY" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="Y">
+			<input id="silA" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="rotation">
+			<!-- <button type="submit" class="btn btn-primary input-small" onclick="setTan()">Set</button> -->
+		</form>
+		<!-- coordinates -->
+
 	 </div>
 		<br />
-		<div class="well well-lg"><h4>Tangram Silhouettes Project .... <mark>трябва да се преведе на английски!</mark> база данни с интересни силуети за древната логическа игра <strong>Танграм</strong>.</h4>
+		<div class="well well-lg"><h4>Tangram Silhouettes Project ...... и силуети за древната логическа игра <strong>Танграм</strong>.</h4>
 		</div>
-		<p><br />Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея.</p>
+		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея, а вашето име ще бъде включено в списъка с <a href="#about">автори</a>.</p>
 	</div>
 </div>
 </div>
@@ -172,17 +181,17 @@
 <div id="project" class="jumbotron">
   <div class="row">
     <div class="col-sm-8">
-      <h2>Проект „Танграм Силуети“</h2>
-      <h3>Целта на проект „Танграм Силуети“ (Tangram Silhouettes Project) е да събере възможно най-пълен набор от интересни силуети, като за всеки е описано решение.</h3><br>
-	  
+      <h2>Tangram Silhouettes Project</h2>
+      <h3>Tangram Silhouettes Project ............. събере възможно най-пълен набор от интересни силуети, като за всеки е описано решение.</h3>
     </div>
     <div class="col-sm-4">
 		<p>Всички познати ни <strong>2122</strong> силуета са събрани в една книга.</p>
       <a href="#book" class="btn btn-default btn-lg btn-block" role="button">Свободно изтегляне</a>
 	  <!--
+	  <a href="#" class="btn btn-warning btn-lg btn-block" role="button">Donate <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
 	  <a href="#book" class="btn btn-default btn-lg btn-block disabled" role="button"><i class="fa fa-android" aria-hidden="true"></i> Download app</a>
 	  <a href="#book" class="btn btn-default btn-lg btn-block disabled" role="button"><i class="fa fa-apple" aria-hidden="true"></i> Download app</a>
-	  <a href="/TSP.zip" class="btn btn-default btn-lg btn-block disabled" role="button"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download whole TSP site<br /> (for offline reading)</a>
+	  <a href="/TSP.zip" class="btn btn-default btn-lg btn-block disabled" role="button"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download whole TSP site (for offline reading)</a>
 	  -->
     </div>
   </div>
@@ -192,7 +201,6 @@
 <div id="rules" class="container-fluid bg-grey text-center">
   <h2>Правила</h2>
   <h4>Танграм е древна китайска логическа игра, вид главоблъсканица за подреждане. Състои се от седем плочки, наречени <strong>тани</strong>, които изобразяват прости геометрични форми.</h4>
-  <br>
   <div class="row slideanim">
     <div class="col-sm-6">
       <span class="glyphicon glyphicon-ok-circle logo-small"></span>
@@ -217,7 +225,7 @@
 		<img class="img-responsive" src="image/set.png" alt="Tangram set">
 	</div>
     <div class="col-sm-4 text-left" >
-		<p>Комплектът от 7 плочки за игра обикновено е изработен от дърво, пластмаса, метал или картон.</p>
+		<p>Комплектът от 7 плочки за игра се състои от два големи триъгълника, един среден триъгълник, два малки триъгълника, един квадрат и един ромбоид. Обикновено е изработен от дърво, пластмаса, метал или картон.</p>
 		<p>Ако не разполагате с такъв, можете сами да си направите. Материалът няма значение, стига да го изрежете в правилните размери и пропорции.</p>
 		<p>Изрежете квадрат с резмери 12х12cm (или 4х4inches) и дебелина 3-6mm, като използвате тази <a data-toggle="modal" data-target="#imageSetModal">схема</a>. Изрежете по маркираните линии и загладете ръбовете, ако е необходимо.</p>
 	</div>
@@ -227,8 +235,8 @@
 <!-- Container (Paradox Section) -->
 <div id="paradox" class="container-fluid bg-grey text-center">
 <h2>Парадокс</h2>
-<p><mark>Парадокс</mark> са силуети, които са почти еднакви, но все пак се различават.<br />
-На пръв поглед изглежда невъзможно да бъдат направени с един и същ брой тани. Но така е само на пръв поглед. Е, понякога и на втори. ヅ </p>
+<p><mark>Парадокс</mark> са силуети, които са почти еднакви, но все пак се различават.</p>
+<p>На пръв поглед изглежда невъзможно да бъдат направени с един и същ брой тани. Но така е само на пръв поглед. Е, понякога и на втори. ヅ </p>
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -270,10 +278,10 @@
 </div>
 
 <!-- Container (Complexity Section) -->
-<div id="complexity" class="container-fluid text-center">
+<div id="complexity" class="container-fluid">
   <div class="row slideanim">
     <div class="col-sm-12 text-left" >
-		<h2>Силуети и тяхната сложност</h2><br>
+		<h2>Силуети и тяхната сложност</h2>
 		<p>Броят комбинации на седемте геометрични фигури е повече от 1 милиард. Но не всички от тях отговарят на правилата на играта. Ако изключим тези с припокриване на елементите, остават около 30 милиона подреждания. Като изключим различните подредби, образуващи един и същ силует, то възможностите намаляват до 10 милиона. От тези валидни 10 милиона комбинации, под 10% „приличат на нещо“. С други думи – според математиците – около <mark>1 милион</mark> са силуетите, които биха представлявали интерес.</p>
 		<div class="well">Но на практика досега са описани само около 3000 силуета!</div>
 		<p>Относно <mark>сложността</mark>: Трудно е да се дефинира „сложност“ на даден силует, защото „труден за подреждане“ звучи твърде субективно. Все пак смята се, че колкото по-компактен е даден силует, толкова е по-трудно да се намери решението му. “По-разхвърляните“ силуети по принцип се решават по-лесно.</p>
@@ -283,7 +291,7 @@
 </div>
 
 <!-- Container (Strategy Section) -->
-<div id="strategy" class="container-fluid bg-grey text-center">
+<div id="strategy" class="container-fluid bg-grey">
   <div class="row slideanim">
     <div class="col-sm-12 text-left" >
 	<h2>Стратегия</h2>
@@ -398,11 +406,12 @@
 </div>
 
 <!-- Container (History Section) -->
-<div id="history" class="container-fluid text-center">
+<div id="history" class="container-fluid">
   <div class="row slideanim">
     <div class="col-sm-12 text-left" >
       <h2>История, факти и спекулации</h2>
-		<p>Древният произход на Танграм не е доказан със сигурност, тъй като най-ранното известно писмено свидетелство за него е в китайска книга от 1813 г., но се смята, че пъзелът е бил широко разпространен в Китай далеч преди това, като е бил любима игра на жените и децата. Може би това е причината да няма по-ранни писмени доказателства – вероятно в онези времена и места се е смятало, че не си струва да се пише и изследва такава „несериозна” игра. На Запад е известен от началото на 19 век, когато моряци го донесли със себе си от Хонг Конг до Англия. Предполага се, че наименованието Танграм се е получило при неправилно произнасяне на китайски термин, който моряците научили от търговците на опиум. Едното предположение е, че идва от „танка“, наименование на лодките на търговците, и английското „game“ (игра). Друга възможност е да идва от „тан“, китайска дума за местните „дами за удоволствия“, които неизменно съпътствали моряците. Навярно играта е била любимо занимание в свободното време и на двете групи.</p>
+		<p>Много китайски учени вярват, че корените на играта танграм могат да се проследят до 11 век, от когато е запазен ръкопис, описващ набор от седем правоъгълни маси и техни възможни разположения при празненства. Комплектът маси се обогатил и доразвил като бройка и форми през 14-16 век и е описан в ръкопис от 1617г. Опростена версия на този комплект, с форми отговарящи на играта танграм, се появил в началото на 18 век.</p>
+		<p>Древният произход на играта не е доказан със сигурност, тъй като най-ранното известно писмено свидетелство е в китайска книга от 1813 г., но се смята, че пъзелът е бил широко разпространен в Китай далеч преди това, като е бил любима игра на жените и децата. Може би това е причината да няма по-ранни писмени доказателства – вероятно в онези времена и места се е смятало, че не си струва да се пише и изследва такава „несериозна” игра. На Запад е известен от началото на 19 век, когато моряци го донесли със себе си от Хонг Конг до Англия. Предполага се, че наименованието Танграм се е получило при неправилно произнасяне на китайски термин, който моряците научили от търговците на опиум. Едното предположение е, че идва от „танка“, наименование на лодките на търговците, и английското „game“ (игра). Друга възможност е да идва от „тан“, китайска дума за местните „дами за удоволствия“, които неизменно съпътствали моряците. Навярно играта е била любимо занимание в свободното време и на двете групи.</p>
 		<p>Тъй като истинската история на Танграм е забулена в митове и мистерия, истината за неговия произход и етимология е обект на значителна спекулация.</p>
 		<p>През 1903г. американският специалист по пъзели Сам Лойд издава книга, наречена „The 8th Book of Tan, Part I”, в която прокарва идеята, че Танграм е измислен преди 4000 години от древнокитайската личност (човек или божество) Тан, което със седемте части представило сътворението на всичко в света, а самите тани представлявали небесните тела. Книгата донесла добри приходи на своя автор, но впоследствие се оказва, че информацията в нея е пълна измислица, която не почива на никакви факти.</p>
 		<p>Въпреки съмнителната достоверност на фактите, книгата на Сам Лойд изиграла решаваща роля за популяризирането на Танграм в западния свят. В нея са събрани около 640 примерни фигури, 7 от които са невъзможни или поне засега (повече от 110 години по-късно) няма открито решение за тях. По-късно издаваните книги, а наскоро и във виртуалното пространство, обикновено копират вече публикувани силуети, включително грешките в тях.</p>
@@ -475,15 +484,65 @@
       </div>
     </div>
   </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>EN/ePUB</h1>
+        </div>
+        <div class="panel-body">
+          <p>Език: <strong>Английски</strong></p>
+		  <p>Формат: <strong>ePUB</strong></p>
+          <p>Размер: <strong>-</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Безплатно</h3>
+          <button class="btn btn-lg disabled">Изтегляне</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>EN/PDF/A5</h1>
+        </div>
+        <div class="panel-body">
+          <p>Език: <strong>Английски</strong></p>
+		  <p>Формат: <strong>PDF</strong></p>
+          <p>Размер: <strong>A5</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Безплатно</h3>
+		  <a href="book/Tangram-Silhouettes-Project-EN-6x9.pdf" target="_blank" class="btn btn-lg" role="button">Изтегляне</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>EN/PDF/A4</h1>
+        </div>
+        <div class="panel-body">
+          <p>Език: <strong>Английски</strong></p>
+		  <p>Формат: <strong>PDF</strong></p>
+          <p>Размер: <strong>A4</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>Безплатно</h3>
+		  <a href="book/Tangram-Silhouettes-Project-EN-A4.pdf" target="_blank" class="btn btn-lg disabled" role="button">Изтегляне</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Container (Help us Section) -->
 <div class="jumbotron text-center">
   <h1>Вашето участие?</h1>
   <h2>Това е проект за който и вие може да допринете като:</h2>
-		<p><span class="glyphicon glyphicon-thumbs-up"></span> откриете интересен силует и го изпратите.</p>
-		<p><span class="glyphicon glyphicon-thumbs-up"></span> преведете книгата и/или сайта.</p>
-		<p><span class="glyphicon glyphicon-thumbs-up"></span> се включите в програмирането, дизайна или в отстраняването на грешки в този сайт.</p>
+		<p><i class="fa fa-check-square-o" aria-hidden="true"></i> откриете интересен силует и го изпратите.</p>
+		<p><i class="fa fa-check-square-o" aria-hidden="true"></i> преведете книгата и/или сайта.</p>
+		<p><i class="fa fa-check-square-o" aria-hidden="true"></i> се включите в програмирането, дизайна или в отстраняването на грешки в този сайт.</p>
 		<p> ... или изпратите <i class="fa fa-beer" aria-hidden="true"></i> на екипа ни. ヅ</p>
 </div>
 
@@ -492,7 +551,6 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid text-center">
 	<h2 class="text-center">Вашето мнение е важно за нас</h2>
-	<!-- <a class="btn btn-default btn-lg" data-toggle="modal" data-target="#commentsModal">Оставете коментар</a> -->
 	<a class="btn btn-default btn-lg" href="news.html">Оставете коментар</a>
 	<a class="btn btn-default btn-lg" href="https://facebook.com/">
 		<i class="fa fa-facebook" title="Facebook" aria-hidden="true"></i>
@@ -508,12 +566,6 @@
 <div id="about" class="container-fluid bg-grey text-left">
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
-<!--      <h2>Нашата цел</h2>
-	</div>
-	<p>Въпреки твърденията, че съществуват около 1 милион интересни фигури, досега са публикувани едва около 3000.</p>
-	<div class="well">Нашата цел е да съберем, проверим и опишем възможно най-голям брой интересни силуети.</div>
-	<p>Ако знаете силует, който не е включен в нашата база, моля да ни го изпратите. След проверка за уникалност, силуетът ще бъде включен в базата данни, а вашето име ще бъде добавено в списъка с автори.</p>
-	-->
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -521,7 +573,7 @@
 					<a data-toggle="collapse" href="#authors"><i class="glyphicon glyphicon-user"></i>&nbsp; Автори</a>
 				</h3>
 			</div>
-			<div id="authors" class="panel-collapse collapse">
+			<div id="authors" class="panel-collapse collapse in">
 				<div class="panel-body">
 					<p>Танграм е древна игра и авторите на голям брой от силуетите са неизвестни.</p>
 					<p>Значителен принос имат следните автори:</p>
@@ -529,9 +581,9 @@
 						<li class="list-group-item">Ch’ien Yun-Chi – публикувала през 1858г. 6 ръкописа, съдържащи 1689 силуета.</li>
 						<li class="list-group-item">Sam Loyd – публикувал през 1903г. 640 силуета в книгата си „The 8 th Book of Tan, Part I”, около 400 от които навярно са измислени от него.</li>
 						<li class="list-group-item">Henry Ernest Dudeney – автор на първите "парадокс" силуети, публикувани в книгата му "Amusements in Mathematics".</li>
-						<li class="list-group-item"><a href="http://www.slocumpuzzles.com/index2.html" target="_blank">Jerry Slocum</a> – публикувал като съавтор през 2003г. най-задълбоченото проучване за танграм. Книгата съдържаща 1756 силуета.</li>
+						<li class="list-group-item"><a href="http://www.slocumpuzzles.com/index2.html" target="_blank">Jerry Slocum</a> – публикувал като съавтор през 2003г. най-задълбоченото проучване за танграм. Книгата съдържа около 1700 силуета.</li>
 						<li class="list-group-item">Нашият екип – скромен принос от няколко десетки силуета и публикувал безплатно най-пълнатия сборник със силуети за танграм.</li>
-						<li class="list-group-item">__________ – тук е мястото за вашето име. Просто ни изпратете уникален силует.</li>
+						<li class="list-group-item">__________ – тук е мястото за вашето име. Просто ни <a href="javascript:infoSil()">изпратете</a> уникален силует.</li>
 					</ul>
 				</div>
 			</div>
@@ -545,13 +597,14 @@
 			<div id="credit" class="panel-collapse collapse">
 				<div class="panel-body">
 					<ul class="list-group">
-						<li class="list-group-item">Преводачи:</li>
+						<li class="list-group-item">Преводачи: _______</li>
 						<li class="list-group-item">Автор: Георги Андонов</li>
 						<li class="list-group-item">Програмист: Георги Андонов</li>
 						<li class="list-group-item"><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com" target="_blank">GitHub</a> - hosting</li>
 						<li class="list-group-item"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> - HTML, CSS, and JS framework</li>
 						<li class="list-group-item">Bootstrap theme "<a href="http://www.w3schools.com/bootstrap/bootstrap_theme_company.asp" target="_blank">Company</a>" from W3Schools</li>
-						<li class="list-group-item"><a href="https://formspree.io/" target="_blank">FormSpree</a> - forms for static HTML pages</li>
+						<li class="list-group-item"><a href="https://greensock.com/gsap" target="_blank">GreenSock Animation Platform (GSAP)</a> - tools for scripted animation</li>
+						<li class="list-group-item"><a href="https://getsimpleform.com/" target="_blank">Simple Form</a></li>
 					</ul>
 				</div>
 			</div>
@@ -571,7 +624,6 @@
 						<li class="list-group-item">CloudFlare SSL for TangramSP.net</li>
 						<li class="list-group-item">превод на сайта на английски</li>
 						<li class="list-group-item">превод на книгата на английски</li>
-						<li class="list-group-item">News&Comments modal or page?</li>
 						<li class="list-group-item">social media pages: facebook & Google plus</li>
 						<li class="list-group-item">visual controls in Game mode - <i class="glyphicon glyphicon-move"></i>/<i class="glyphicon glyphicon-repeat"></i></li>
 					</ul>
@@ -582,7 +634,6 @@
  </div>
 </div>
 </div>
-
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
@@ -611,6 +662,7 @@
 			<ul class="dropdown-menu">
 				<li><a href="index.html">English</a></li>
 				<li><a href="index-BG.html">Български</a></li>
+				<li class="disabled"><a >Ελληνικά</a></li>
 			</ul>
 			</div>
 		</div>
@@ -624,9 +676,9 @@
 				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
 				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
 				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
-				<li><a href="javascript:chooseStyle('theme6', 60)">Лилаво 1</a></li>
-				<li><a href="javascript:chooseStyle('theme7', 60)">Лилаво 2</a></li>
-				<li><a href="javascript:chooseStyle('theme8', 60)">Червено</a></li>
+				<li><a href="javascript:chooseStyle('theme6', 60)">Лилаво</a></li>
+				<li><a href="javascript:chooseStyle('theme7', 60)">Сиво</a></li>
+				<li><a href="javascript:chooseStyle('theme8', 60)">Бордо</a></li>
 			</ul>
 			</div>
 		</div>
@@ -635,7 +687,7 @@
 			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Анимация <span class="caret"></span></button>
 			<ul class="dropdown-menu">
 				<li><a href="#">Elastic slow out</a></li>
-				<li class="disabled"><a href="javascript:chooseStyle('default', 60)">Linear</a></li>
+				<li class="disabled"><a href="">Linear</a></li>
 			</ul>
 			</div>
 		</div>
@@ -663,7 +715,6 @@
 		</div>
 		</div>
 		</div>
-		
 		<div class="panel-group">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -683,11 +734,11 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><kbd><</kbd></td>
+								<td><kbd>&lt;</kbd></td>
 								<td>Предишен силует</td>
 							</tr>
 							<tr>
-								<td><kbd>></kbd></td>
+								<td><kbd>&gt;</kbd></td>
 								<td>Следващ силует</td>
 							</tr>
 							<tr>
@@ -725,8 +776,6 @@
 		</form>
       </div>
       <div class="modal-footer">
-<!--      		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Credits</button> 
--->
 		<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Close</button>
       </div>
     </div>
@@ -738,7 +787,7 @@
 <div class="modal fade" id="infoSilModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSil">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST">
+	<form name="sendform" action="https://getsimpleform.com/messages?form_api_token=926188a045abfc556ae7e9d195e2e654" method="POST" enctype="multipart/form-data">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Силует</h4>
@@ -750,7 +799,7 @@
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="_replyto" placeholder="Your e-mail address" type="email">
+			<input class="form-control" id="email" name="_replyto" placeholder="e-mail address" type="email">
         </div>
 	  </div>
 	  <div class="row">
@@ -770,7 +819,7 @@
 		<div class="col-sm-12 form-group">
 			<textarea class="form-control" id="message" name="message" placeholder="Your message" rows="3"></textarea>
 		</div>
-	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
+	  <input type="hidden" name="redirect_to" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
 	  <!-- Thank you URL -->
 	  </div>
 	  </div>
@@ -823,7 +872,6 @@
 </div>
 <!-- END - Silhouette not found - modal dialogue -->
 
-
 <!-- Image Set - modal dialogue -->
 <div class="modal fade" id="imageSetModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabelImageSet">
   <div class="modal-dialog modal-lg" role="document">
@@ -861,65 +909,6 @@
   </div>
 </div>
 <!-- END - Image Stomachion - modal dialogue -->
-
-<!-- Comments - modal dialogue 
-<div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="ModalComments">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-	<form name="sendform" action="https://formspree.io/george.andonov@gmail.com" method="POST" >
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalComments"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Comments</h4>
-      </div>
-      
-	  <div class="modal-body">
-	  <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="myName" name="myName" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="myEmail" name="myEmail" placeholder="e-mail address" type="email" required>
-        </div>
-	 </div>
-	 <div class="row">
-		<div class="col-sm-12 form-group">
-			<textarea class="form-control" id="myMessage" name="myMessage" placeholder="Your message" rows="3" required></textarea>
-		</div>
-	 </div>
-	 <div class="row">
-	  <div class="col-sm-12 form-group">
-	  <input type="hidden" name="_next" value="https://george-andonov.github.io/TangramSP/thank-you.html" />
-		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
-		<br /><hr>
-		<h3>Comments from facebook users</h3>
-			<div class="fb-comments" data-href="https://george-andonov.github.io/TangramSP/index.html" data-width="100%" data-numposts="15"></div>
-	  </div>
-	 </div>
-	</div>
-      <div class="modal-footer">
-	   <div class="row">
-		<div class="col-sm-12 text-center">
-			<button type="submit" class="btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-		</div>
-	   </div>
-	  </div>
-	</form>
-    </div>
-  </div>
-</div>
-<!-- END - Comments - modal dialogue -->
-
-<!-- *** Plug-ins *** -->
-<!-- facebook plugin 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
--->
 
 
 <!-- *** Plug-ins *** -->
