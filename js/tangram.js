@@ -309,7 +309,6 @@ function gameMode() {
 		document.getElementById("flipBtn").setAttribute("onclick", "flipRomboid()");
 		$('#actBtn').show();
 		$('#flipBtn').show();
-		$('#coordinates').show()
 	}
 	else {
 		document.getElementById("actBtn").className += " disabled";
@@ -318,7 +317,6 @@ function gameMode() {
 		document.getElementById("flipBtn").removeAttribute('onclick');
 		$('#actBtn').hide();
 		$('#flipBtn').hide();
-		$('#coordinates').hide()
 	}
 }
 
@@ -349,10 +347,21 @@ function showHint() {
 	}
 }
 
+// Print coordinates
 function printXYA() {
 	document.getElementById("silX").value = Math.round(currentTan._gsTransform.x);
 	document.getElementById("silY").value = Math.round(currentTan._gsTransform.y);
 	document.getElementById("silA").value = Math.round(currentTan._gsTransform.rotation);
+}
+
+// Set Current Tan's coordinates
+function setTan() {
+	curX = Math.round(currentTan._gsTransform.x);
+	curY = Math.round(currentTan._gsTransform.y);
+	curA = Math.round(currentTan._gsTransform.rotation);
+	TweenLite.to(currentTan, 0.5, {x:curX});
+	TweenLite.to(currentTan, 0.5, {y:curY});
+	TweenLite.to(currentTan, 0.5, {rotation:curA});
 }
 
 // Keyboard	
@@ -462,6 +471,14 @@ function checkKeys(e) {
 		case 191:
             // question key pressed
 			hideBorder();
-            break;  
+            break; 
+		case 107:
+            // + key pressed
+			$('#coordinates').show();
+            break; 
+		case 109:
+            // - key pressed
+			$('#coordinates').hide();
+            break; 
     }   
 }
