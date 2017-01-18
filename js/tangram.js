@@ -63,7 +63,7 @@ $(document).on('change', '.file', function(){
 		var t6Rot=document.getElementById("tan6")._gsTransform.rotation.toFixed(0);
 		//simple overlap test
 		
-		silString = "* To be validated *, new, "+
+		silString = "** To be validated **, new, "+
 			document.getElementById("tan1")._gsTransform.x +", " +document.getElementById("tan1")._gsTransform.y +", "+t1Rot + ", " +
 			document.getElementById("tan2")._gsTransform.x +", " +document.getElementById("tan2")._gsTransform.y +", "+t2Rot + ", " +
 			document.getElementById("tan3")._gsTransform.x +", " +document.getElementById("tan3")._gsTransform.y +", "+t3Rot + ", " +
