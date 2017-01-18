@@ -5,15 +5,15 @@
   <title>Tangram Silhouettes Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name=”description” content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
-  <meta name=keywords content="tangram, tangram game">
+  <meta name="description" content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
+  <meta name="keywords" content="tangram, tangram game">
   <!-- Favicon -->
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/bf1fabbea4.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css" title="default">
   <link rel="alternate stylesheet" type="text/css" href="css/theme1.css" title="theme1">
   <link rel="alternate stylesheet" type="text/css" href="css/theme2.css" title="theme2">
@@ -172,7 +172,7 @@
 		<br />
 		<div class="well well-lg"><h4>Проект „Танграм Силуети“ (Tangram Silhouettes Project) е база данни с интересни силуети за древната логическа игра <strong>Танграм</strong>.</h4>
 		</div>
-		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея, а вашето име ще бъде включено в списъка с <a href="#about">автори</a>.</p>
+		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея, а вашето име ще бъде включено в списъка с <a href="#authorsList">автори</a>.</p>
 	</div>
 </div>
 </div>
@@ -562,8 +562,8 @@
 	</a>
 </div>
 
-<!-- Container (About us Section) -->
-<div id="about" class="container-fluid bg-grey text-left">
+<!-- Container (Authors Section) -->
+<div id="authorsList" class="container-fluid bg-grey text-left">
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
 	<div class="panel-group">
@@ -620,9 +620,9 @@
 					<p>Следните неща би било добре да се случат в най-скоро време:</p>
 					<ul class="list-group">
 						<li class="list-group-item">въвеждане на <mark>всички</mark> познати силуети в базата данни</li>
-						<li class="list-group-item">CloudFlare SSL for TangramSP.net</li>
 						<li class="list-group-item">превод на сайта на английски</li>
 						<li class="list-group-item">превод на книгата на английски</li>
+						<li class="list-group-item">CloudFlare SSL</li>
 						<li class="list-group-item">social media pages: facebook & Google plus</li>
 						<li class="list-group-item">visual controls in Game mode - <i class="glyphicon glyphicon-move"></i>/<i class="glyphicon glyphicon-repeat"></i></li>
 					</ul>
@@ -670,14 +670,14 @@
 			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp; Дизайн <span class="caret"></span></button>
 			<ul class="dropdown-menu">
 				<li><a href="javascript:chooseStyle('default', 60)">Кафяво</a></li>
-				<li><a href="javascript:chooseStyle('theme1', 60)">Зелено</a></li>
-				<li><a href="javascript:chooseStyle('theme2', 60)">Пастел</a></li>
-				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
-				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
-				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
-				<li><a href="javascript:chooseStyle('theme6', 60)">Лилаво</a></li>
-				<li><a href="javascript:chooseStyle('theme7', 60)">Сиво</a></li>
 				<li><a href="javascript:chooseStyle('theme8', 60)">Бордо</a></li>
+				<li><a href="javascript:chooseStyle('theme1', 60)">Зелено</a></li>
+				<li><a href="javascript:chooseStyle('theme6', 60)">Лилаво</a></li>
+				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
+				<li><a href="javascript:chooseStyle('theme2', 60)">Пастел</a></li>
+				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
+				<li><a href="javascript:chooseStyle('theme7', 60)">Сиво</a></li>
+				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
 			</ul>
 			</div>
 		</div>
@@ -795,10 +795,16 @@
 	  <div class="modal-body">
 	  <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+				<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+			</div>
         </div>
         <div class="col-sm-6 form-group">
-			<input class="form-control" id="email" name="_replyto" placeholder="e-mail address" type="email">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+				<input class="form-control" id="email" name="_replyto" placeholder="e-mail address" type="email">
+			</div>
         </div>
 	  </div>
 	  <div class="row">
