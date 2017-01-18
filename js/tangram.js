@@ -1,5 +1,5 @@
 // Tangram Silhouettes Project
-// Config Section	
+// Config Section
 	var dur=1;
 	// TweenLite.defaultEase = Power1.easeOut;
 	TweenLite.defaultEase = Back.easeOut.config(1.7);
@@ -8,7 +8,7 @@
 	var indx = 0; 
 	// Random silhouette =Math.floor(Math.random() * (max - min)) + min;
 	// var indx = Math.floor(Math.random() * (silDb.length -1));
-	var slideTime = 2500; // 2s for Slideshow
+	var slideTime = 2500; // 2.5s for Slideshow
 	var slideRun = "";
 	var sld = 0;
 	var hideB = 0; //Hide silhouette border
@@ -63,7 +63,7 @@ $(document).on('change', '.file', function(){
 		var t6Rot=document.getElementById("tan6")._gsTransform.rotation.toFixed(0);
 		//simple overlap test
 		
-		silString = "*** To be validated ***, new, "+
+		silString = "* To be validated *, new, "+
 			document.getElementById("tan1")._gsTransform.x +", " +document.getElementById("tan1")._gsTransform.y +", "+t1Rot + ", " +
 			document.getElementById("tan2")._gsTransform.x +", " +document.getElementById("tan2")._gsTransform.y +", "+t2Rot + ", " +
 			document.getElementById("tan3")._gsTransform.x +", " +document.getElementById("tan3")._gsTransform.y +", "+t3Rot + ", " +
