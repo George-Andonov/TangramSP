@@ -29,8 +29,15 @@
   .playground {
 	  /* background-image: url("../image/gray-paper-2.png"); */
       /* color: #fff; */
-      padding: 55px 25px;
+      padding: 55px 25px 0px 25px; 
       font-family: Montserrat, sans-serif;
+	  position:relative;
+  }
+  .svgcanvas {
+	width:100%;
+    padding-bottom:110%;
+    height:0;
+    overflow:hidden;
   }
 svg{
   max-height:830px; /* chrome needs it  */
