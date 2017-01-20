@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
   <!-- Tangram Silhouettes Project - CC BY-SA -->
   <title>Tangram Silhouettes Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name=”description” content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
-  <meta name=keywords content="tangram, tangram game">
+  <meta name="description" content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
+  <meta name="keywords" content="tangram, tangram game">
   <!-- Favicon -->
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/bf1fabbea4.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css" title="default">
   <link rel="alternate stylesheet" type="text/css" href="css/theme1.css" title="theme1">
   <link rel="alternate stylesheet" type="text/css" href="css/theme2.css" title="theme2">
@@ -62,6 +62,7 @@
 <div class="playground text-center">
 <div class="row">
 	<div class="col-sm-8">
+	<div class="svgcanvas">
 	<svg id="canvas" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
 		<!-- Canvas grid -->
 		<defs>
@@ -85,7 +86,7 @@
 			</filter>
 		</defs>
 		<ellipse cx="400" cy="400" rx="410" ry="410" fill="url(#grad1)" /> 
-		<rect id="gridRec" x="0" y="0" width="800" height="800" style="fill:none;stroke-width:2;stroke:gray" /> 
+		<rect id="gridRec" x="0" y="0" width="800" height="800" style="fill:none;stroke-width:1;stroke:gray" /> 
 		<rect width="800" height="800" fill="url(#grid)" />
 
 		<!-- Tans -->
@@ -106,42 +107,43 @@
 	<!-- Tangram buttons -->
 	<div class="btn-group btn-group-lg">
 		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="prevSil()"><i class="glyphicon glyphicon-chevron-left"></i></button>
-		<button id="actBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Преместване/Завъртане (Del)"><i class="glyphicon glyphicon-move"></i></button>
-		<button id="flipBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Обръщане на ромбоида (Ins)" ><i class="glyphicon glyphicon-share" aria-hidden="true"></i></button>
+		<button id="actBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Move/Rotate (Del)"><i class="glyphicon glyphicon-move"></i></button>
+		<button id="flipBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Flip Rhomboid (Ins)" ><i class="glyphicon glyphicon-share" aria-hidden="true"></i></button>
 		<button id="slideBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="slideShow()" title="Slideshow"><i class="fa fa-pause" aria-hidden="true"></i></button>
-		<button id="hideBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Показване/Скриване на очертанията (?)"><i class="fa fa-question" aria-hidden="true"></i></button>
-		<button id="infoBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="infoSil()" title="Изпращане на силует"><i class="fa fa-send" aria-hidden="true"></i></button>
+		<button id="hideBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Show Sollution (?)"><i class="fa fa-question" aria-hidden="true"></i></button>
+		<button id="infoBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="infoSil()" title="Send"><i class="fa fa-send" aria-hidden="true"></i></button>
 		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="nextSil()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+	</div>
 	</div>
 	</div>
 	<div class="col-sm-4 text-left"> 
 	 <div class="row">
 		<div id="groupDrop" class="input-group">
 			<span class="input-group-addon"><i class="fa fa-folder-open-o" aria-hidden="true"></i></span>
-			<button id="groupMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">All silhouettes<span class="caret"></span></button> 
+			<button id="groupMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">All Silhouettes<span class="caret"></span></button> 
 			<ul class="dropdown-menu scrollable-menu">
-				<li><a href='javascript:showGroup("all")'>Всички силуети</a></li>
+				<li><a href='javascript:showGroup("all")'>All Silhouettes</a></li>
 				<li class="divider"></li>
-				<li><a href='javascript:showGroup("Toy")'>Играчки</a></li>
-				<li><a href='javascript:showGroup("Animal")'>Животни</a></li>
-				<li><a href='javascript:showGroup("Face")'>Лица</a></li>
-				<li><a href='javascript:showGroup("Boat")'>Лодки</a></li>
-				<li><a href='javascript:showGroup("Object")'>Обекти</a></li>
-				<li><a href='javascript:showGroup("Nature")'>Природа</a></li>
-				<li><a href='javascript:showGroup("Bird")'>Птици</a></li>
-				<li><a href='javascript:showGroup("Fish")'>Риби</a></li>
-				<li><a href='javascript:showGroup("Building")'>Сгради</a></li>
-				<li><a href='javascript:showGroup("Sport")'>Спорт</a></li>
-				<li><a href='javascript:showGroup("Technical")'>Техника</a></li>
-				<li><a href='javascript:showGroup("Shape")'>Форми</a></li>
-				<li><a href='javascript:showGroup("Human")'>Хора</a></li>
+				<li><a href='javascript:showGroup("Animal")'>Animal</a></li>
+				<li><a href='javascript:showGroup("Bird")'>Bird</a></li>
+				<li><a href='javascript:showGroup("Boat")'>Boat</a></li>
+				<li><a href='javascript:showGroup("Building")'>Building</a></li>
+				<li><a href='javascript:showGroup("Face")'>Face</a></li>
+				<li><a href='javascript:showGroup("Fish")'>Fish</a></li>
+				<li><a href='javascript:showGroup("Human")'>Human</a></li>
+				<li><a href='javascript:showGroup("Object")'>Object</a></li>
+				<li><a href='javascript:showGroup("Nature")'>Nature</a></li>
+				<li><a href='javascript:showGroup("Shape")'>Shape</a></li>
+				<li><a href='javascript:showGroup("Sport")'>Sport</a></li>
+				<li><a href='javascript:showGroup("Technical")'>Technical</a></li>
+				<li><a href='javascript:showGroup("Toy")'>Toy</a></li>
 				<li class="divider"></li>
-				<li><a href='javascript:showGroup("new")'>Нови (непроверени)</a></li>
+				<li><a href='javascript:showGroup("new")'>New (not approved yet)</a></li>
 			</ul>
 		</div>	
 		<div class="input-group">
 			<span class="input-group-addon"><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
-			<button id="silMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"> Силует <span class="caret"></span></button>
+			<button id="silMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">Silhouette <span class="caret"></span></button>
 				<ul id="silDropdown" class="dropdown-menu scrollable-menu dropdown-menu-right">
 				<!-- will be populated on load -->
 				</ul>
@@ -170,9 +172,9 @@
 
 	 </div>
 		<br />
-		<div class="well well-lg"><h4>Tangram Silhouettes Project ...... и силуети за древната логическа игра <strong>Танграм</strong>.</h4>
+		<div class="well well-lg"><h4>Tangram Silhouettes Project(TangramSP.net) is the larges database with <strong>tangram</strong> silhouettes.</h4>
 		</div>
-		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея, а вашето име ще бъде включено в списъка с <a href="#about">автори</a>.</p>
+		<p>Ако знаете силует, който не е включен в нашата база, моля да ни го <a href="javascript:infoSil()">изпратите</a>. След проверка за уникалност, силуетът ще бъде добавен към нея, а вашето име ще бъде включено в списъка с <a href="#authorsList">автори</a>.</p>
 	</div>
 </div>
 </div>
@@ -182,11 +184,11 @@
   <div class="row">
     <div class="col-sm-8">
       <h2>Tangram Silhouettes Project</h2>
-      <h3>Tangram Silhouettes Project ............. събере възможно най-пълен набор от интересни силуети, като за всеки е описано решение.</h3>
+      <h3>Целта на проект „Танграм Силуети“ (Tangram Silhouettes Project) е да събере възможно най-пълен набор от интересни силуети, като за всеки е описано решение.</h3>
     </div>
     <div class="col-sm-4">
 		<p>Всички познати ни <strong>2122</strong> силуета са събрани в една книга.</p>
-      <a href="#book" class="btn btn-default btn-lg btn-block" role="button">Свободно изтегляне</a>
+      <a href="#book" class="btn btn-default btn-lg btn-block" role="button">Free Download</a>
 	  <!--
 	  <a href="#" class="btn btn-warning btn-lg btn-block" role="button">Donate <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
 	  <a href="#book" class="btn btn-default btn-lg btn-block disabled" role="button"><i class="fa fa-android" aria-hidden="true"></i> Download app</a>
@@ -199,7 +201,7 @@
 
 <!-- Container (Rules Section) -->
 <div id="rules" class="container-fluid bg-grey text-center">
-  <h2>Правила</h2>
+  <h2>Rules</h2>
   <h4>Танграм е древна китайска логическа игра, вид главоблъсканица за подреждане. Състои се от седем плочки, наречени <strong>тани</strong>, които изобразяват прости геометрични форми.</h4>
   <div class="row slideanim">
     <div class="col-sm-6">
@@ -219,13 +221,13 @@
 <div id="set" class="container-fluid text-left">
   <div class="row slideanim">
 	<div class="col-sm-12">
-		<h2>Комплект за игра</h2>
+		<h2>Tangram set</h2>
 	</div>
 	<div class="col-sm-8">
 		<img class="img-responsive" src="image/set.png" alt="Tangram set">
 	</div>
     <div class="col-sm-4 text-left" >
-		<p>Комплектът от 7 плочки за игра се състои от два големи триъгълника, един среден триъгълник, два малки триъгълника, един квадрат и един ромбоид. Обикновено е изработен от дърво, пластмаса, метал или картон.</p>
+		<p>Комплектът от 7 плочки за игра се състои от два големи, един среден и два малки триъгълника, квадрат и ромбоид. Обикновено е изработен от дърво, пластмаса, метал или картон.</p>
 		<p>Ако не разполагате с такъв, можете сами да си направите. Материалът няма значение, стига да го изрежете в правилните размери и пропорции.</p>
 		<p>Изрежете квадрат с резмери 12х12cm (или 4х4inches) и дебелина 3-6mm, като използвате тази <a data-toggle="modal" data-target="#imageSetModal">схема</a>. Изрежете по маркираните линии и загладете ръбовете, ако е необходимо.</p>
 	</div>
@@ -234,8 +236,8 @@
 
 <!-- Container (Paradox Section) -->
 <div id="paradox" class="container-fluid bg-grey text-center">
-<h2>Парадокс</h2>
-<p><mark>Парадокс</mark> са силуети, които са почти еднакви, но все пак се различават.</p>
+<h2>Paradox</h2>
+<p><mark>Paradox</mark> са силуети, които са почти еднакви, но все пак се различават.</p>
 <p>На пръв поглед изглежда невъзможно да бъдат направени с един и същ брой тани. Но така е само на пръв поглед. Е, понякога и на втори. ヅ </p>
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <!-- Indicators -->
@@ -284,7 +286,7 @@
 		<h2>Силуети и тяхната сложност</h2>
 		<p>Броят комбинации на седемте геометрични фигури е повече от 1 милиард. Но не всички от тях отговарят на правилата на играта. Ако изключим тези с припокриване на елементите, остават около 30 милиона подреждания. Като изключим различните подредби, образуващи един и същ силует, то възможностите намаляват до 10 милиона. От тези валидни 10 милиона комбинации, под 10% „приличат на нещо“. С други думи – според математиците – около <mark>1 милион</mark> са силуетите, които биха представлявали интерес.</p>
 		<div class="well">Но на практика досега са описани само около 3000 силуета!</div>
-		<p>Относно <mark>сложността</mark>: Трудно е да се дефинира „сложност“ на даден силует, защото „труден за подреждане“ звучи твърде субективно. Все пак смята се, че колкото по-компактен е даден силует, толкова е по-трудно да се намери решението му. “По-разхвърляните“ силуети по принцип се решават по-лесно.</p>
+		<p>Относно <mark>complexity</mark>: Трудно е да се дефинира „сложност“ на даден силует, защото „труден за подреждане“ звучи твърде субективно. Все пак смята се, че колкото по-компактен е даден силует, толкова е по-трудно да се намери решението му. “По-разхвърляните“ силуети по принцип се решават по-лесно.</p>
 		<p>От друга гледна точка, по-компактните силуети предполагат наличие на няколко алтернативни решения, докато “по-разхвърляните“ вероятно имат едно единствено.</p>
 	</div>
   </div>
@@ -294,7 +296,7 @@
 <div id="strategy" class="container-fluid bg-grey">
   <div class="row slideanim">
     <div class="col-sm-12 text-left" >
-	<h2>Стратегия</h2>
+	<h2>Strategy</h2>
 	<p>Ами ... няма печеливша стратегия. Просто се забавлявате. Това е игра. Играете срещу себе си. Няма мамене, няма блъф. Важно е да не губите увереност и чувство за хумор. Фактът, че хлапето на съседа за по-малко от минута открива решение на силует, над който вие сте се мъчили 2 дни, не означава, че трябва да правите някакви изводи за себе си. Ако се изнервите от продължителното обмисляне и липсата на успех – изберете си друга фигура. Когато сте в подходящо настроение ще се върнете към старото предизвикателство.</p>
 	<p>Все пак ето някои напътствия, които ще ви упътят в правилния път:</p>
 	<ul class="list-group">
@@ -409,7 +411,7 @@
 <div id="history" class="container-fluid">
   <div class="row slideanim">
     <div class="col-sm-12 text-left" >
-      <h2>История, факти и спекулации</h2>
+      <h2>History, факти и спекулации</h2>
 		<p>Много китайски учени вярват, че корените на играта танграм могат да се проследят до 11 век, от когато е запазен ръкопис, описващ набор от седем правоъгълни маси и техни възможни разположения при празненства. Комплектът маси се обогатил и доразвил като бройка и форми през 14-16 век и е описан в ръкопис от 1617г. Опростена версия на този комплект, с форми отговарящи на играта танграм, се появил в началото на 18 век.</p>
 		<p>Древният произход на играта не е доказан със сигурност, тъй като най-ранното известно писмено свидетелство е в китайска книга от 1813 г., но се смята, че пъзелът е бил широко разпространен в Китай далеч преди това, като е бил любима игра на жените и децата. Може би това е причината да няма по-ранни писмени доказателства – вероятно в онези времена и места се е смятало, че не си струва да се пише и изследва такава „несериозна” игра. На Запад е известен от началото на 19 век, когато моряци го донесли със себе си от Хонг Конг до Англия. Предполага се, че наименованието Танграм се е получило при неправилно произнасяне на китайски термин, който моряците научили от търговците на опиум. Едното предположение е, че идва от „танка“, наименование на лодките на търговците, и английското „game“ (игра). Друга възможност е да идва от „тан“, китайска дума за местните „дами за удоволствия“, които неизменно съпътствали моряците. Навярно играта е била любимо занимание в свободното време и на двете групи.</p>
 		<p>Тъй като истинската история на Танграм е забулена в митове и мистерия, истината за неговия произход и етимология е обект на значителна спекулация.</p>
@@ -513,7 +515,7 @@
         </div>
         <div class="panel-footer">
           <h3>Безплатно</h3>
-		  <a href="book/Tangram-Silhouettes-Project-EN-6x9.pdf" target="_blank" class="btn btn-lg" role="button">Изтегляне</a>
+		  <a href="book/Tangram-Silhouettes-Project-EN-6x9.pdf" target="_blank" class="btn btn-lg disabled" role="button">Изтегляне</a>
         </div>
       </div>
     </div>
@@ -552,18 +554,18 @@
 <div id="contact" class="container-fluid text-center">
 	<h2 class="text-center">Вашето мнение е важно за нас</h2>
 	<a class="btn btn-default btn-lg" href="news.html">Оставете коментар</a>
-	<a class="btn btn-default btn-lg" href="https://facebook.com/">
+	<a class="btn btn-default btn-lg disabled" href="https://facebook.com/">
 		<i class="fa fa-facebook" title="Facebook" aria-hidden="true"></i>
 		<span class="sr-only">Facebook</span>
 	</a>
-	<a class="btn btn-default btn-lg" href="https://plus.google.com/">
+	<a class="btn btn-default btn-lg disabled" href="https://plus.google.com/">
 		<i class="fa fa-google-plus" title="Google plus" aria-hidden="true"></i>
 		<span class="sr-only">Google plus</span>
 	</a>
 </div>
 
-<!-- Container (About us Section) -->
-<div id="about" class="container-fluid bg-grey text-left">
+<!-- Container (Authors Section) -->
+<div id="authorsList" class="container-fluid bg-grey text-left">
   <div class="row slideanim">
 	<div class="col-sm-12 text-left" >
 	<div class="panel-group">
@@ -599,7 +601,6 @@
 					<ul class="list-group">
 						<li class="list-group-item">Преводачи: _______</li>
 						<li class="list-group-item">Автор: Георги Андонов</li>
-						<li class="list-group-item">Програмист: Георги Андонов</li>
 						<li class="list-group-item"><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com" target="_blank">GitHub</a> - hosting</li>
 						<li class="list-group-item"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> - HTML, CSS, and JS framework</li>
 						<li class="list-group-item">Bootstrap theme "<a href="http://www.w3schools.com/bootstrap/bootstrap_theme_company.asp" target="_blank">Company</a>" from W3Schools</li>
@@ -620,12 +621,12 @@
 					<p>Следните неща би било добре да се случат в най-скоро време:</p>
 					<ul class="list-group">
 						<li class="list-group-item">въвеждане на <mark>всички</mark> познати силуети в базата данни</li>
-						<li class="list-group-item">domain TangramSP.net</li>
-						<li class="list-group-item">CloudFlare SSL for TangramSP.net</li>
 						<li class="list-group-item">превод на сайта на английски</li>
 						<li class="list-group-item">превод на книгата на английски</li>
+						<li class="list-group-item">CloudFlare SSL</li>
 						<li class="list-group-item">social media pages: facebook & Google plus</li>
 						<li class="list-group-item">visual controls in Game mode - <i class="glyphicon glyphicon-move"></i>/<i class="glyphicon glyphicon-repeat"></i></li>
+						<li class="list-group-item">Silhouette's naming & numbering convention. Sorting.</li>
 					</ul>
 				</div>
 			</div>
@@ -651,7 +652,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelSettings"> <i class="glyphicon glyphicon-cog"></i> Настройки</h4>
+        <h4 class="modal-title" id="ModalLabelSettings"> <i class="glyphicon glyphicon-cog"></i> Settings</h4>
       </div>
       <div class="modal-body">
 		<form class="form-horizontal">
@@ -668,23 +669,23 @@
 		</div>
 		<div class="dropdown col-sm-4">
 			<div class="btn-group btn-block">
-			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp; Дизайн <span class="caret"></span></button>
+			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp; Theeme <span class="caret"></span></button>
 			<ul class="dropdown-menu">
 				<li><a href="javascript:chooseStyle('default', 60)">Кафяво</a></li>
-				<li><a href="javascript:chooseStyle('theme1', 60)">Зелено</a></li>
-				<li><a href="javascript:chooseStyle('theme2', 60)">Пастел</a></li>
-				<li><a href="javascript:chooseStyle('theme3', 60)">Синьо</a></li>
-				<li><a href="javascript:chooseStyle('theme4', 60)">Оранжево</a></li>
-				<li><a href="javascript:chooseStyle('theme5', 60)">Розово</a></li>
-				<li><a href="javascript:chooseStyle('theme6', 60)">Лилаво</a></li>
-				<li><a href="javascript:chooseStyle('theme7', 60)">Сиво</a></li>
-				<li><a href="javascript:chooseStyle('theme8', 60)">Бордо</a></li>
+				<li><a href="javascript:chooseStyle('theme3', 60)">Blue</a></li>
+				<li><a href="javascript:chooseStyle('theme8', 60)">Bordo</a></li>
+				<li><a href="javascript:chooseStyle('theme1', 60)">Green</a></li>
+				<li><a href="javascript:chooseStyle('theme7', 60)">Grey</a></li>
+				<li><a href="javascript:chooseStyle('theme4', 60)">Orange</a></li>
+				<li><a href="javascript:chooseStyle('theme2', 60)">Pastel</a></li>
+				<li><a href="javascript:chooseStyle('theme5', 60)">Pink</a></li>
+				<li><a href="javascript:chooseStyle('theme6', 60)">Violet</a></li>
 			</ul>
 			</div>
 		</div>
 		<div class="dropdown col-sm-4">
 			<div class="btn-group btn-block">
-			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Анимация <span class="caret"></span></button>
+			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Animation <span class="caret"></span></button>
 			<ul class="dropdown-menu">
 				<li><a href="#">Elastic slow out</a></li>
 				<li class="disabled"><a href="">Linear</a></li>
@@ -692,26 +693,26 @@
 			</div>
 		</div>
 		</div>
-		<h3>Настройки</h3>
+		<h3>Settings</h3>
 		<div class="row">
 		<div class="dropdown col-sm-6">
 		<div class="checkbox">
-			<label><input id="cbGameMode" type="checkbox" onchange="gameMode()"> Режим на игра</label>
+			<label><input id="cbGameMode" type="checkbox" onchange="gameMode()"> Game Mode</label>
 		</div>
 		<!-- <div class="checkbox">
 			<label><input id="cbGrid" type="checkbox" checked disabled> Show grid</label>
 		</div> 
 		-->
 		<div class="checkbox">
-			<label><input id="cbHint" type="checkbox" onchange="showHint()">Показване/Скриване на очертанията</label>
+			<label><input id="cbHint" type="checkbox" onchange="showHint()">Show/Hide Sollution</label>
 		</div>
 		</div>
 		<div class="dropdown col-sm-6">
 		<div class="checkbox">
-			<label><input id="cbShadow" type="checkbox" checked onchange="showShadow()"> Сянка</label>
+			<label><input id="cbShadow" type="checkbox" checked onchange="showShadow()"> Shadow</label>
 		</div>
 		<div class="checkbox">
-			<label><input id="cbRandom" type="checkbox" checked onchange="" disabled> Произволен ред</label>
+			<label><input id="cbRandom" type="checkbox" checked onchange="" disabled> Random Order</label>
 		</div>
 		</div>
 		</div>
@@ -719,7 +720,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 				<h3 class="panel-title">
-					<a data-toggle="collapse" href="#collapse1"><i class="fa fa-keyboard-o" aria-hidden="true"></i>&nbsp; Бързи клавиши</a>
+					<a data-toggle="collapse" href="#collapse1"><i class="fa fa-keyboard-o" aria-hidden="true"></i>&nbsp; Short Keys</a>
 				</h3>
 				</div>
 				<div id="collapse1" class="panel-collapse collapse">
@@ -728,42 +729,42 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th>Клавиш</th>
-								<th>Действие</th>
+								<th>Key</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td><kbd>&lt;</kbd></td>
-								<td>Предишен силует</td>
+								<td>Previous Silhouette</td>
 							</tr>
 							<tr>
 								<td><kbd>&gt;</kbd></td>
-								<td>Следващ силует</td>
+								<td>Next Silhouette</td>
 							</tr>
 							<tr>
 								<td><kbd>?</kbd></td>
-								<td>Показване/Скриване на очертанията</td>
+								<td>Show/Hide Sollution</td>
 							</tr>
 							<tr>
 								<td><kbd>Ins</kbd></td>
-								<td>Обръщане на ромбоида</td>
+								<td>Flip Rhomboid</td>
 							</tr>
 							<tr>
 								<td><kbd>Del</kbd></td>
-								<td>Режим на Преместване/Завъртане</td>
+								<td>Move/Rotate Mode</td>
 							</tr>
 							<tr>
 								<td><kbd>1</kbd>...<kbd>7</kbd></td>
-								<td>Избор на тан</td>
+								<td>Tan Selection</td>
 							</tr>
 							<tr>
 								<td><kbd>Shift</kbd>&nbsp; + &nbsp; <span class="glyphicon glyphicon-arrow-left"></span> <span class="glyphicon glyphicon-arrow-right"></span> <span class="glyphicon glyphicon-arrow-up"></span> <span class="glyphicon glyphicon-arrow-down"></span></td>
-								<td>Преместване в съответната посока</td>
+								<td>Movement in Selected Direction</td>
 							</tr>
 							<tr>
 								<td><kbd>8</kbd> <kbd>9</kbd></td>
-								<td>Завъртане</td>
+								<td>Rotation</td>
 							</tr>
 						</tbody>
 					</table>
@@ -790,16 +791,22 @@
 	<form name="sendform" action="https://getsimpleform.com/messages?form_api_token=926188a045abfc556ae7e9d195e2e654" method="POST" enctype="multipart/form-data">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Силует</h4>
+        <h4 class="modal-title" id="ModalLabelSil"> <i class="glyphicon glyphicon-tags"></i>&nbsp; Silhouette</h4>
       </div>
       
 	  <div class="modal-body">
 	  <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+				<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+			</div>
         </div>
         <div class="col-sm-6 form-group">
-			<input class="form-control" id="email" name="_replyto" placeholder="e-mail address" type="email">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+				<input class="form-control" id="email" name="_replyto" placeholder="e-Mail Address" type="email">
+			</div>
         </div>
 	  </div>
 	  <div class="row">
@@ -826,7 +833,7 @@
 
       <div class="modal-footer">
 		<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send it to T.S.P.</button>
+		<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send it to TangramSP</button>
       </div>
 	</form>
     </div>
@@ -878,7 +885,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="ModalLabelImageSet"> <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp; Схема 12x12cm</h4>
+        <h4 class="modal-title" id="ModalLabelImageSet"> <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp; Scheame 12x12cm</h4>
       </div>
       <div class="modal-body text-center">
 		<img class="img-responsive" src="image/make.png" alt="Tangram set">
