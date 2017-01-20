@@ -5,7 +5,7 @@
   <title>Tangram Silhouettes Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tangram Silhouettes Project(TangramSP) is the larges database with tangram silhouettes.">
+  <meta name="description" content="Tangram Silhouettes Project(TangramSP) е база данни с интересни силуети за древната логическа игра Танграм.">
   <meta name="keywords" content="tangram, tangram game">
   <!-- Favicon -->
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
@@ -38,7 +38,7 @@
   <script type="text/javascript" src="js/tangram.js"></script>
 </head>
 
-<body id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="startMe()">
+<body id="tangram" data-spy="scroll" data-target=".navbar" data-offset="60" onload="startMe()">
 <!-- Menu -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#homePage">Танграм Силуети</a>
+      <a class="navbar-brand" href="#tangram">Танграм Силуети</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right text-right">
@@ -86,7 +86,7 @@
 			</filter>
 		</defs>
 		<ellipse cx="400" cy="400" rx="410" ry="410" fill="url(#grad1)" /> 
-		<rect id="gridRec" x="0" y="0" width="800" height="800" style="fill:none;stroke-width:2;stroke:gray" /> 
+		<rect id="gridRec" x="0" y="0" width="800" height="800" style="fill:none;stroke-width:1;stroke:gray" /> 
 		<rect width="800" height="800" fill="url(#grid)" />
 
 		<!-- Tans -->
@@ -638,7 +638,7 @@
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
-  <a href="#homePage" title="To Top">
+  <a href="#tangram" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> CC BY-SA 4.0</a> - Tangram Silhouettes Project 2017 - <a href="https://TangramSP.net" title="Tangram Silhouettes Project">TangramSP.net</a></p>
@@ -935,7 +935,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#homePage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#tangram']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
