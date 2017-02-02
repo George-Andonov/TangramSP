@@ -2,6 +2,7 @@
 <html lang="bg">
 <head>
   <!-- Tangram Silhouettes Project - CC BY-SA -->
+  <!-- Ver. 2017-Feb-02 -->
   <title>Tangram Silhouettes Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,6 +101,7 @@
 			<polygon id="tan7" points="0,0 141.42,0 212.13,70.71 70.71,70.71" /> 
 			<polygon id="tan7f" points="0,0 70.71,70.71 70.71,212.13 0,141.42" /> 
 		</g>
+		<text id="visualControlIcon" text-anchor="left" alignment-baseline="middle"></text> 
 		<!-- <text id="silName" x="400" y="20" fill="black" text-anchor="middle" alignment-baseline="middle">Silhouette - group</text>
 		<text id="silNo" x="400" y="40" fill="gray" text-anchor="middle" alignment-baseline="middle">Sil No: _____</text> 
 		-->
@@ -110,7 +112,7 @@
 		<button id="actBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Преместване/Завъртане (Del)"><i class="glyphicon glyphicon-move"></i></button>
 		<button id="flipBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Обръщане на ромбоида (Ins)" ><i class="glyphicon glyphicon-share" aria-hidden="true"></i></button>
 		<button id="slideBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="slideShow()" title="Slideshow"><i class="fa fa-pause" aria-hidden="true"></i></button>
-		<button id="hideBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Показване/Скриване на очертанията (?)"><i class="fa fa-question" aria-hidden="true"></i></button>
+		<button id="hideBtn" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" onclick="hideBorder()" title="Показване/Скриване на очертанията (?)"><i class="fa fa-question" aria-hidden="true"></i></button>
 		<button id="infoBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="infoSil()" title="Изпращане на силует"><i class="fa fa-send" aria-hidden="true"></i></button>
 		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" onclick="nextSil()"><i class="glyphicon glyphicon-chevron-right"></i></button>
 	</div>
@@ -166,7 +168,7 @@
 			<input id="silX" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="X">
 			<input id="silY" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="Y">
 			<input id="silA" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-small text-center" placeholder="rotation">
-			<!-- <button type="submit" class="btn btn-primary input-small" onclick="setTan()">Set</button> -->
+			<button type="submit" class="btn btn-info input-small" onclick="setTan()">Set</button>
 		</form>
 		<!-- coordinates -->
 
