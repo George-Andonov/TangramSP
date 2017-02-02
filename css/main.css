@@ -28,7 +28,6 @@
   }
   .playground {
 	  /* background-image: url("../image/gray-paper-2.png"); */
-      /* color: #fff; */
       padding: 55px 25px 0px 25px; 
       font-family: Montserrat, sans-serif;
 	  position:relative;
@@ -42,6 +41,13 @@
 svg{
   max-height:830px; /* chrome needs it  */
 } 
+
+svg text {
+   font-family: FontAwesome;
+   font-size: 40px;
+   text-shadow: 5px 5px 8px grey;
+   fill: white;
+}
   
   .hidSil {
 	stroke: #D2593F;
@@ -61,6 +67,11 @@ svg{
   .showTan {
 	stroke-width: 1;
 	fill: #D2593F;  
+  }
+  
+  .selectedTan {
+	stroke-width: 2;
+	fill: #ff0000;  
   }
 
   .container-fluid {
@@ -263,7 +274,7 @@ svg{
   }
   
   .input-small{
-	max-width: 70px;
+	max-width: 65px;
   }
 
 .file {
