@@ -688,8 +688,11 @@
 			<div class="btn-group btn-block">
 			<button class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Анимация <span class="caret"></span></button>
 			<ul class="dropdown-menu">
-				<li><a href="#">Elastic slow out</a></li>
-				<li class="disabled"><a href="">Linear</a></li>
+				<li><a href="javascript:animation('back')">Back slow out</a></li>
+				<li><a href="javascript:animation('bounce')">Bounce</a></li>
+				<li><a href="javascript:animation('circ')">Circ easy out</a></li>
+				<li><a href="javascript:animation('elastic')">Elastic slow out</a></li>
+				<li><a href="javascript:animation('linear')">Linear</a></li>
 			</ul>
 			</div>
 		</div>
@@ -736,14 +739,9 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><kbd>&lt;</kbd></td>
-								<td>Предишен силует</td>
+								<td><kbd>&lt;</kbd>&nbsp;<kbd>&gt;</kbd></td>
+								<td>Предишен/Следващ силует</td>
 							</tr>
-							<tr>
-								<td><kbd>&gt;</kbd></td>
-								<td>Следващ силует</td>
-							</tr>
-							<tr>
 								<td><kbd>?</kbd></td>
 								<td>Показване/Скриване на очертанията</td>
 							</tr>
@@ -756,7 +754,7 @@
 								<td>Режим на Преместване/Завъртане</td>
 							</tr>
 							<tr>
-								<td><kbd>1</kbd>...<kbd>7</kbd></td>
+								<td><kbd>0</kbd>&nbsp;<kbd>1</kbd>...<kbd>7</kbd></td>
 								<td>Избор на тан</td>
 							</tr>
 							<tr>
