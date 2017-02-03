@@ -1,11 +1,9 @@
 // Tangram Silhouettes Project
 // Config Section
 	var dur=1;
-	// TweenLite.defaultEase = Power1.easeOut;
-	TweenLite.defaultEase = Back.easeOut.config(1.7);
-	// TweenLite.defaultOverwrite = "none"; // TBD overlaping
-	
 	var indx = 0; 
+	// default Ease Out
+	TweenLite.defaultEase = Back.easeOut.config(1.7);
 	var slideTime = 2500; // 2.5s for Slideshow
 	var slideRun = "";
 	var sld = 0;
@@ -395,6 +393,28 @@ function setTan() {
 	TweenLite.to(currentTan, 0.5, {x:curX});
 	TweenLite.to(currentTan, 0.5, {y:curY});
 	TweenLite.to(currentTan, 0.5, {rotation:curA});
+}
+
+// Animation
+function animation(animType){
+	switch(animType) {
+    case 'back':
+		TweenLite.defaultEase = Back.easeOut.config(1.7);
+		// TweenLite.defaultOverwrite = "none"; // TBD overlaping
+        break;
+    case 'bounce':
+		TweenLite.defaultEase = Bounce.easeOut;
+        break;
+	case 'circ':
+		TweenLite.defaultEase = Circ.easeOut;
+        break;
+	case 'elastic':
+		TweenLite.defaultEase = Elastic.easeOut.config(0.75, 0.5);
+        break;
+	case 'linear':
+        TweenLite.defaultEase = Power1.easeOut;
+        break;
+	}
 }
 
 // Keyboard	
