@@ -274,7 +274,8 @@ svg text {
   }
   
   .input-small{
-	max-width: 65px;
+	font-size: 11px;
+	max-width: 55px;
   }
 
 .file {
