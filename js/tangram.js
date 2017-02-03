@@ -2,8 +2,7 @@
 // Config Section
 	var dur=1;
 	var indx = 0; 
-	// default Ease Out
-	TweenLite.defaultEase = Back.easeOut.config(1.7);
+	TweenLite.defaultEase = Back.easeOut.config(1.7); // default Ease Out
 	var slideTime = 2500; // 2.5s for Slideshow
 	var slideRun = "";
 	var sld = 0;
@@ -166,7 +165,7 @@ $(document).on('change', '.file', function(){
 
 // Draw random silhouette
 var drawRandSil = function (){
-	indx=Math.floor(Math.random() * (silDb.length -1));
+	indx = Math.floor(Math.random() * (silDb.length -1)) + 1;
 	drawSil();
 }
 // Slideshow	
@@ -400,7 +399,7 @@ function animation(animType){
 	switch(animType) {
     case 'back':
 		TweenLite.defaultEase = Back.easeOut.config(1.7);
-		// TweenLite.defaultOverwrite = "none"; // TBD overlaping
+		// TweenLite.defaultOverwrite = "none"; // TBD overlapping
         break;
     case 'bounce':
 		TweenLite.defaultEase = Bounce.easeOut;
