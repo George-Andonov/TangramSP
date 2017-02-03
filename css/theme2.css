@@ -14,6 +14,9 @@
   .showTan {
 	fill: #EEA090;  
   }
+  .selectedTan {
+	fill: #FFAB9A;  
+  }
   .logo-small {
       color: #EEA090;
   }

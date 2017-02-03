@@ -70,8 +70,8 @@ svg text {
   }
   
   .selectedTan {
-	stroke-width: 2;
-	fill: #ff0000;  
+	stroke-width: 1;
+	fill: #FF6C4C;  
   }
 
   .container-fluid {
