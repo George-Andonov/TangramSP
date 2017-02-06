@@ -432,38 +432,43 @@
 
 <!-- Container (Book Section) -->
 <div id="book" class="container-fluid bg-grey">
-  <div class="text-center">
-    <h2>Всички силуети в една книга</h2>
-	<p>Като всяка антична игра и тази е препоръчително да се играе реално, а не във виртуалното пространство.</p>
-	<p>За целта си купете Танграм или го <a href="#set">направете</a> по описания по-горе начин. Свалете книгата и си изберете предизвикателство. Приятно забавление.</p>
-    <h4>Изберете някоя от следните възможности:</h4>
-  </div>
   <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
+	<div class="col-sm-12 col-xs-12">
+		<h2>Всички силуети в една книга</h2>
+		<p>Като всяка антична игра и тази е препоръчително да се играе реално, а не във виртуалното пространство.</p>
+		<p>За целта си купете Танграм или го <a href="#set">направете</a> по описания по-горе начин. Свалете книгата и си изберете предизвикателство. Приятно забавление.</p>
+	</div>
+    <div class="col-sm-6 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>BG/ePUB</h1>
+          <h1><i class="fa fa-cloud-download" aria-hidden="true"></i>&nbspБезплатно изтегляне</h1>
         </div>
         <div class="panel-body">
-          <p>Език: <strong>Български</strong></p>
-		  <p>Формат: <strong>ePUB</strong></p>
-          <p>Размер: <strong>-</strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>Безплатно</h3>
-          <button class="btn btn-lg disabled">Изтегляне</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>BG/PDF/A5</h1>
-        </div>
-        <div class="panel-body">
-          <p>Език: <strong>Български</strong></p>
-		  <p>Формат: <strong>PDF</strong></p>
-          <p>Размер: <strong>A5</strong></p>
+			<div id="langDrop" class="input-group">
+				<span class="input-group-addon">Език</span>
+				<button id="langMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">Български&nbsp<span class="caret"></span></button> 
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a href='javascript:showGroup("all")'>English </a></li>
+					<li><a href='javascript:showGroup("Toy")'>Български </a></li>
+				</ul>
+			</div>
+			<div id="formatDrop" class="input-group">
+				<span class="input-group-addon">Формат</span>
+				<button id="formatMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">PDF&nbsp<span class="caret"></span></button> 
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a href='javascript:showGroup("all")'>ePUB </a></li>
+					<li><a href='javascript:showGroup("Toy")'>PDF </a></li>
+				</ul>
+			</div>
+			<div id="pageDrop" class="input-group">
+				<span class="input-group-addon">Размер</span>
+				<button id="pageSizeMenu" class="btn btn-default dropdown-toggle btn-block" type="button" data-toggle="dropdown">A5&nbsp<span class="caret"></span></button> 
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a href='javascript:showGroup("all")'>- </a></li>
+					<li><a href='javascript:showGroup("Toy")'>A4 </a></li>
+					<li><a href='javascript:showGroup("Toy")'>A5 </a></li>
+				</ul>
+			</div>
         </div>
         <div class="panel-footer">
           <h3>Безплатно</h3>
@@ -471,71 +476,8 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>BG/PDF/A4</h1>
-        </div>
-        <div class="panel-body">
-          <p>Език: <strong>Български</strong></p>
-		  <p>Формат: <strong>PDF</strong></p>
-          <p>Размер: <strong>A4</strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>Безплатно</h3>
-		  <a href="book/Tangram-Silhouettes-Project-BG-A4.pdf" target="_blank" class="btn btn-lg disabled" role="button">Изтегляне</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>EN/ePUB</h1>
-        </div>
-        <div class="panel-body">
-          <p>Език: <strong>Английски</strong></p>
-		  <p>Формат: <strong>ePUB</strong></p>
-          <p>Размер: <strong>-</strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>Безплатно</h3>
-          <button class="btn btn-lg disabled">Изтегляне</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>EN/PDF/A5</h1>
-        </div>
-        <div class="panel-body">
-          <p>Език: <strong>Английски</strong></p>
-		  <p>Формат: <strong>PDF</strong></p>
-          <p>Размер: <strong>A5</strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>Безплатно</h3>
-		  <a href="book/Tangram-Silhouettes-Project-EN-6x9.pdf" target="_blank" class="btn btn-lg disabled" role="button">Изтегляне</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>EN/PDF/A4</h1>
-        </div>
-        <div class="panel-body">
-          <p>Език: <strong>Английски</strong></p>
-		  <p>Формат: <strong>PDF</strong></p>
-          <p>Размер: <strong>A4</strong></p>
-        </div>
-        <div class="panel-footer">
-          <h3>Безплатно</h3>
-		  <a href="book/Tangram-Silhouettes-Project-EN-A4.pdf" target="_blank" class="btn btn-lg disabled" role="button">Изтегляне</a>
-        </div>
-      </div>
+	<div class="col-sm-6 col-xs-12">
+		<img class="img-responsive" src="image/Set-book-BW.png" alt="Tangram set">
     </div>
   </div>
 </div>
