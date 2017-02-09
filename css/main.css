@@ -52,7 +52,7 @@ svg text {
   
   .hidSil {
 	stroke: #3399CC;
-	stroke-width: 1;
+	stroke-width: 2;
 	fill: #3399CC;  
   }
   .showSil {
