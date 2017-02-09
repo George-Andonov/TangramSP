@@ -1,4 +1,4 @@
-/* default - #A6540D Brown */
+/* default - #3399CC Blue */
 
   body {
       background-image: url("../image/gray-paper-1.png");
@@ -21,7 +21,7 @@
       margin-bottom: 30px;
   }
   .jumbotron {
-      background-color: #A6540D; 
+      background-color: #3399CC; 
       color: #fff;
       padding: 50px 25px;
       font-family: Montserrat, sans-serif;
@@ -51,14 +51,14 @@ svg text {
 }
   
   .hidSil {
-	stroke: #A6540D;
+	stroke: #3399CC;
 	stroke-width: 1;
-	fill: #A6540D;  
+	fill: #3399CC;  
   }
   .showSil {
 	stroke: black;
 	stroke-width: 1;
-	fill: #A6540D;  
+	fill: #3399CC;  
   }
   .hidTan {
 	stroke: none;
@@ -67,12 +67,12 @@ svg text {
   }
   .showTan {
 	stroke-width: 1;
-	fill: #A6540D;  
+	fill: #3399CC;  
   }
   
   .selectedTan {
 	stroke-width: 1;
-	fill: #E07821;  
+	fill: #3DB6F2;  
   }
 
   .container-fluid {
@@ -85,7 +85,7 @@ svg text {
       background-color: #f6f6f6;
   }
   .logo-small {
-      color: #A6540D;
+      color: #3399CC;
       font-size: 50px;
   }
   .logo {
@@ -108,16 +108,16 @@ svg text {
   }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #A6540D;
+      color: #3399CC;
   }
   .carousel-indicators {
       bottom: 0px;
   }
   .carousel-indicators li {
-      border-color: #A6540D;
+      border-color: #3399CC;
   }
   .carousel-indicators li.active {
-      background-color: #A6540D;
+      background-color: #3399CC;
   }
   .item h4 {
       font-size: 19px;
@@ -130,7 +130,7 @@ svg text {
       font-style: normal;
   }
   .panel {
-      border: 1px solid #A6540D;
+      border: 1px solid #3399CC;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
 	  background-color: rgba(0,0,0,.075);
@@ -139,13 +139,13 @@ svg text {
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #A6540D;
+      border: 1px solid #3399CC;
       background-color: #fff !important;
-      color: #A6540D;
+      color: #3399CC;
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #A6540D !important;
+      background-color: #3399CC !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -165,12 +165,12 @@ svg text {
   }
   .panel-footer .btn {
       margin: 15px 0;
-      background-color: #A6540D;
+      background-color: #3399CC;
       color: #fff;
   }
   .navbar {
       margin-bottom: 0;
-      background-color: #A6540D;
+      background-color: #3399CC;
 	  z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -178,7 +178,7 @@ svg text {
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
-	  background: rgba(166,84,13,0.9);
+	  background: rgba(51,153,204,0.9);
   }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
@@ -186,7 +186,7 @@ svg text {
 	  text-shadow: 3px 3px 8px gray;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #A6540D !important;
+      color: #3399CC !important;
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -197,7 +197,7 @@ svg text {
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #A6540D;
+      color: #3399CC;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -248,7 +248,7 @@ svg text {
   }
   
   .modal-header {
-	background-color: #A6540D;
+	background-color: #3399CC;
   }
   
 .scrollable-menu {
@@ -267,7 +267,7 @@ svg text {
     }
   
 .social {
-      color: #A6540D;
+      color: #3399CC;
   }
 
   .input-group{
