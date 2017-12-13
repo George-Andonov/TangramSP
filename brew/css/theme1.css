@@ -1,0 +1,61 @@
+/* theme 1 - #26A68E Green */
+
+  .jumbotron {
+      background-color: #26A68E; 
+  }  
+  .hidSil {
+	stroke: #26A68E;
+	fill: #26A68E;  
+  }
+  .showSil {
+	stroke: black;
+	fill: #26A68E;  
+  }
+  .showTan {
+	fill: #26A68E;  
+  }
+  .selectedTan {
+	fill: #36EBC9;  
+  }
+  .logo-small {
+      color: #26A68E;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #26A68E;
+  }
+  .carousel-indicators li {
+      border-color: #26A68E;
+  }
+  .carousel-indicators li.active {
+      background-color: #26A68E;
+  }
+  .panel {
+      border: 1px solid #26A68E;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #26A68E;
+      color: #26A68E;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #26A68E !important;
+  }
+  .panel-footer .btn {
+      background-color: #26A68E;
+  }
+  .navbar {
+      background-color: #26A68E;
+	  background: rgba(38,166,142,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #26A68E !important;
+  }
+  footer .glyphicon {
+      color: #26A68E;
+  }
+  .modal-header {
+	background-color: #26A68E;
+  } 
+.social {
+      color: #26A68E;
+  }

@@ -1,0 +1,61 @@
+/* theme 3 - #A6540D Brown */
+
+  .jumbotron {
+      background-color: #A6540D; 
+  }  
+  .hidSil {
+	stroke: #A6540D;
+	fill: #A6540D;  
+  }
+  .showSil {
+	stroke: black;
+	fill: #A6540D;  
+  }
+  .showTan {
+	fill: #A6540D;  
+  }
+  .selectedTan {
+	fill: #E07821;  
+  }
+  .logo-small {
+      color: #A6540D;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #A6540D;
+  }
+  .carousel-indicators li {
+      border-color: #A6540D;
+  }
+  .carousel-indicators li.active {
+      background-color: #A6540D;
+  }
+  .panel {
+      border: 1px solid #A6540D;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #A6540D;
+      color: #A6540D;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #A6540D !important;
+  }
+  .panel-footer .btn {
+      background-color: #A6540D;
+  }
+  .navbar {
+      background-color: #A6540D;
+	  background: rgba(166,84,13,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #A6540D !important;
+  }
+  footer .glyphicon {
+      color: #A6540D;
+  }
+  .modal-header {
+	background-color: #A6540D;
+  } 
+.social {
+      color: #A6540D;
+  }

@@ -1,0 +1,61 @@
+/* theme 4 - #F4511E Orange */
+
+  .jumbotron {
+      background-color: #F4511E; 
+  }  
+  .hidSil {
+	stroke: #F4511E;
+	fill: #F4511E;  
+  }
+  .showSil {
+	stroke: black;
+	fill: #F4511E;  
+  }
+  .showTan {
+	fill: #F4511E;  
+  }
+  .selectedTan {
+	fill: #FA6A07;  
+  }
+  .logo-small {
+      color: #F4511E;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #F4511E;
+  }
+  .carousel-indicators li {
+      border-color: #F4511E;
+  }
+  .carousel-indicators li.active {
+      background-color: #F4511E;
+  }
+  .panel {
+      border: 1px solid #F4511E;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #F4511E;
+      color: #F4511E;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #F4511E !important;
+  }
+  .panel-footer .btn {
+      background-color: #F4511E;
+  }
+  .navbar {
+      background-color: #F4511E;
+	  background: rgba(244,81,30,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #F4511E !important;
+  }
+  footer .glyphicon {
+      color: #F4511E;
+  }
+  .modal-header {
+	background-color: #F4511E;
+  } 
+.social {
+      color: #F4511E;
+  }

@@ -1,0 +1,61 @@
+/* theme 5 - #F63E87 Pink */
+
+  .jumbotron {
+      background-color: #F63E87; 
+  }  
+  .hidSil {
+	stroke: #F63E87;
+	fill: #F63E87;  
+  }
+  .showSil {
+	stroke: black;
+	fill: #F63E87;  
+  }
+  .showTan {
+	fill: #F63E87;  
+  }
+  .selectedTan {
+	fill: #B52E6B;
+  }
+  .logo-small {
+      color: #F63E87;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #F63E87;
+  }
+  .carousel-indicators li {
+      border-color: #F63E87;
+  }
+  .carousel-indicators li.active {
+      background-color: #F63E87;
+  }
+  .panel {
+      border: 1px solid #F63E87;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #F63E87;
+      color: #F63E87;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #F63E87 !important;
+  }
+  .panel-footer .btn {
+      background-color: #F63E87;
+  }
+  .navbar {
+      background-color: #F63E87;
+	  background: rgba(246,62,135,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #F63E87 !important;
+  }
+  footer .glyphicon {
+      color: #F63E87;
+  }
+  .modal-header {
+	background-color: #F63E87;
+  } 
+.social {
+      color: #F63E87;
+  }

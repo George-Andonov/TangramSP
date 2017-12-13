@@ -1,0 +1,61 @@
+/* theme 2 - #EEA090 Pastel */
+
+  .jumbotron {
+      background-color: #EEA090; 
+  }  
+  .hidSil {
+	stroke: #EEA090;
+	fill: #EEA090;  
+  }
+  .showSil {
+	stroke: black;
+	fill: #EEA090;  
+  }
+  .showTan {
+	fill: #EEA090;  
+  }
+  .selectedTan {
+	fill: #FFAB9A;  
+  }
+  .logo-small {
+      color: #EEA090;
+  }
+  .carousel-control.right, .carousel-control.left {
+      color: #EEA090;
+  }
+  .carousel-indicators li {
+      border-color: #EEA090;
+  }
+  .carousel-indicators li.active {
+      background-color: #EEA090;
+  }
+  .panel {
+      border: 1px solid #EEA090;
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #EEA090;
+      color: #EEA090;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #EEA090 !important;
+  }
+  .panel-footer .btn {
+      background-color: #EEA090;
+  }
+  .navbar {
+      background-color: #EEA090;
+	  background: rgba(238,160,144,0.9);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #EEA090 !important;
+  }
+  footer .glyphicon {
+      color: #EEA090;
+  }
+  .modal-header {
+	background-color: #EEA090;
+  } 
+.social {
+      color: #EEA090;
+  }
