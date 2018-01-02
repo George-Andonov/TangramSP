@@ -167,48 +167,48 @@
   </thead>
   <tbody>
     <tr class="bg-info">
-      <th scope="row"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
+      <th scope="row" class="text-center"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
       <td>Add H<sub>2</sub>O</td>
       <td></td>
 	  <td></td>
     </tr>
 	<tr>
-      <th scope="row">-</th>
+      <th scope="row"><i class="fa fa-fire" aria-hidden="true"></i> Heat</th>
       <td>62 °C</td>
       <td></td>
 	  <td><i class="fa fa-cog" aria-hidden="true"></i></td>
     </tr>
 	<tr class="bg-info">
-      <th scope="row"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
+      <th scope="row" class="text-center"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
       <td>Add malt</td>
       <td></td>
 	  <td></td>
     </tr>
 	<tr>
-      <th scope="row">1 Mash</th>
+      <th scope="row">Mash (PID)</th>
       <td>60 °C</td>
       <td>25</td>
 	  <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
     </tr>
     <tr>
-      <th scope="row">2 Mash</th>
+      <th scope="row">Mash (PID)</th>
       <td>72 °C</td>
       <td>35</td>
 	  <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
     </tr>
     <tr>
-      <th scope="row">3 Mash</th>
+      <th scope="row">Mash (PID)</th>
       <td>78 °C</td>
       <td>15</td>
 	  <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
     </tr>
 	<tr class="bg-warning">
-      <th scope="row"><i class="fa fa-bullhorn" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-bullhorn" aria-hidden="true"></i></th>
       <td>Йодна проба</td>
       <td>@5</td>
     </tr>
 	<tr class="bg-info">
-      <th scope="row"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
+      <th scope="row" class="text-center"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
       <td>Remove malt</td>
       <td></td>
 	  <td></td>
@@ -220,44 +220,44 @@
 	  <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
     </tr>
 	<tr class="bg-success">
-      <th scope="row"><i class="fa fa-flask" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-flask" aria-hidden="true"></i></th>
       <td>Rehydrate Safale US-05 11g</td>
       <td>@70</td>
     </tr>
 	<tr class="bg-success">
-      <th scope="row"><i class="fa fa-leaf" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-leaf" aria-hidden="true"></i></th>
       <td>Cascade 10g</td>
       <td>@60</td>
     </tr>
 	<tr class="bg-warning">
-      <th scope="row"><i class="fa fa-bullhorn" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-bullhorn" aria-hidden="true"></i></th>
       <td>Sanitize Immersion Chiller</td>
       <td>@10</td>
     </tr>
 	<tr class="bg-success">
-      <th scope="row"><i class="fa fa-leaf" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-leaf" aria-hidden="true"></i></th>
       <td>Cascade 5g</td>
       <td>@5</td>
     </tr>
 	<tr class="bg-info">
-      <th scope="row"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
+      <th scope="row" class="text-center"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
       <td>Начало на охлаждане</td>
       <td></td>
 	  <td></td>
     </tr>
 	<tr>
-      <th scope="row"><i class="fa fa-snowflake-o" aria-hidden="true"></i></th>
+      <th scope="row"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Cool</th>
       <td>25 °C</td>
       <td></td>
 	  <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
     </tr>
 	<tr class="bg-success">
-      <th scope="row"><i class="fa fa-flask" aria-hidden="true"></i></th>
+      <th scope="row" ><i class="fa fa-flask" aria-hidden="true"></i></th>
       <td>Yeast in fermenter</td>
       <td>@0</td>
     </tr>
 	<tr class="bg-info">
-      <th scope="row"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
+      <th scope="row" class="text-center"><i class="fa fa-bell-o" aria-hidden="true"></i></th>
       <td>Прехвърляне във ферментатор</td>
       <td></td>
 	  <td></td>
@@ -319,7 +319,7 @@
 	
 	<div class="col-sm-12 text-left" >
 		<div class="progress">
-			<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">01:53:12</div>
+			<div class="progress-bar progress-bar-striped" role="progressbar" style="width:38%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">1:12:56</div>
 		</div>
 		<div class="progress">
 			<div class="progress-bar progress-bar-danger" role="progressbar" style="width:10%">
@@ -338,6 +338,55 @@
 				Cool
 			</div>
 		</div>
+
+
+		
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Сензор',  100]
+        ]);
+
+        var options = {
+          width: 300, height: 300,
+          redFrom: 50, redTo: 70,
+          yellowFrom:40, yellowTo: 50,
+		  yellowColor: '#b3d9ff',
+		  redColor: '#ff8566',
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+        /* setInterval(function() {
+          data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+          chart.draw(data, options);
+        }, 26000);
+		*/
+		// data.setCell(0, 1, 40 + Math.round(60 * Math.random()), (40 + Math.round(60 * Math.random())) + 'k');
+      }
+    </script>
+	<div id="chart_div" style="width: 400px; height: 120px"></div>
+		
+		
+		
+		
 	</div>
   </div>
 </div>
